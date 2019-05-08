@@ -31,7 +31,8 @@ $breakpoints: (
   min-width: 1100px;
 }
 
-
+$coc: #008030;
+ 
 
 body{
 
@@ -41,6 +42,7 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  @include noto();
 
 }
 
@@ -68,6 +70,20 @@ header{
   justify-content: space-between;
   align-items: center;
 
+  transition: .2s;
+
+  &.scroll{
+
+    background: rgba(255, 255, 255, 0.8);
+
+    ul{
+
+      li, li a{
+        color: $coc;
+      }
+    }
+  }
+
   h1{
     width: auto;
     max-height: 60px;
@@ -82,29 +98,40 @@ header{
   }
 
   ul{
+
     display: flex;
     padding-right: 50px;
     min-width: 700px;
     
-
     li{
       margin: 0 10px;
       color: white;
+      font-size: 15px;
+      font-weight: bold;
     }
+
   }
 
 }
 
 
 .bodyimg{
+
   width: 100%;
-  max-width: 1200px;
+  // max-width: 1200px;
   height: auto;
   margin: 0 auto;
+  background: url(../images/main_bg.jpg);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: left bottom;
+  text-align: center;
+  line-height: 0;
 
   img{
 
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
-

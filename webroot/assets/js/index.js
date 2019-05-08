@@ -12,6 +12,22 @@ $(document).ready( function() {
  
     });
 
+    $(".bMenu").click(function(){
+        $('.menu-trigger').toggleClass('active');
+        $("header ul").toggleClass('active');
+        
+        if(scFlag == false){
+            scFlag = true;
+            scrollStop($(window));
+        } 
+        else{
+            scFlag = false;
+            scrollStart($(window));
+        }
+         
+    });
+
+
 });
 
 $(window).scroll(function(){
@@ -51,3 +67,5 @@ $(window).scroll(function(){
     }
 
 });
+
+

@@ -5,6 +5,10 @@
   height: auto;
   @include content_padding();
 
+  @include maxw();
+  margin: 0 auto;
+  
+
   background-image: url(../images/content1_bg.png);
   background-repeat: no-repeat;
   background-size: 80% auto;

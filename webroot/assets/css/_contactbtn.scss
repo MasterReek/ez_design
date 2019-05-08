@@ -8,6 +8,8 @@
   align-items: center;
   flex-wrap: wrap;
   background: #009330;
+  transition: .4s;
+  cursor: pointer;
 
 
   a{
@@ -21,6 +23,26 @@
     align-items: center;
     flex-wrap: wrap;
 
+
+    span{
+      font-size: 50px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      color:#008a2c;
+    }
+
+    i{
+      margin-right: 15px;
+      font-size: 30px;
+    }
+
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     i{
       margin-left: 10px;
     }
@@ -28,18 +50,36 @@
     svg{
       width: 50px;
       margin-left:15px;
+      transition: .4s;
     }
+
 
   }
 
-  span{
-    font-size: 40px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    color:#008a2c;
 
-    i{
-      color: white;
+  &:hover{
+
+    background: #04792b;
+    svg{
+      transform: translateX(15px);
     }
+  }
+ 
+
+  @include mq(){
+
+    justify-content: flex-start;
+
+    a{
+
+      width: 100%;
+      height: 100%;
+
+      span,svg{
+        display: none;
+      }
+
+    }
+
   }
 }

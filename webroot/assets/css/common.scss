@@ -163,12 +163,19 @@ body{
     opacity: .7;
   }
 
+  @include mq(){
+
+    display: none;
+  }
+
 }
- 
+  
 @import "cont1";
 @import "cont2";
 @import "cont3";
 @import "contactbtn"; 
+@import "footer"; 
+@import "loader"; 
 @import "swiper";
 @import "sp_menu";
   

@@ -68,4 +68,9 @@ $(window).scroll(function(){
 
 });
 
-
+$(window).on('load', function(){
+    
+    setTimeout(function(){
+        $('.loader').addClass('active');
+    },400);
+});

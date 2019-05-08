@@ -28,6 +28,10 @@
     letter-spacing: 2px;
     background-color:#0080312c;
     @include inview_item();
+
+    br{
+      display: none;
+    }
   }
 
   >p{
@@ -52,9 +56,12 @@
     align-items: center;
     flex-wrap: wrap;
     width: 80%;
+    max-width: 1000px;
     background-color:#00803190;
     padding: 20px 15px;
     border-radius: 100px;
+
+    @include inview_item();
 
     div{
 
@@ -125,5 +132,51 @@
 
   }
 
+
+  @include mq(){
+
+    // background-color: black;
+    padding: 30px 20px;
+
+    h5{
+      font-size: 18px;
+      line-height: 180%;
+      text-align: center;
+      background: $coc;
+      width: 100%;
+
+      br{
+        display: inline;
+      }
+    }
+
+    >p{
+      margin:20px 0;
+      font-size: 16px;
+      width: 90%;
+
+      br{
+        display: none;
+      }
+    }
+
+    .nums{
+
+      width: 100%;
+      border-radius: 0;
+
+      div{
+        width: 100%;
+
+        &:nth-of-type(1){
+          border-right: 0px;
+          border-bottom: 1px solid white;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+  }
 
 }

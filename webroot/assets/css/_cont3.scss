@@ -3,90 +3,124 @@
 
   width: 100%;
   height: auto;
-  @include content_padding();
+
+  padding: 60px 20px;
 
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color:#0080312c;
+  background-color:$coc;
+  background-image: url(../images/contact_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
 
-  .page_link{
+
+  h5{
+    font-size: 28px;
+    color: white;
+    font-weight: normal;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    letter-spacing: 2px;
+    background-color:#0080312c;
+    @include inview_item();
+  }
+
+  >p{
+    font-size: 18px;
+    text-align: center;
+    line-height: 200%;
+    letter-spacing: 1px;
+    display: block;
+    margin: 60px 0;
+    color: $fontc;
+    width: 100%;
+    color: white;
+    text-shadow: 0 0 5px gray;
 
     @include inview_item();
-    width: 40%;
-    max-width: 400px;
-    height: auto;
-    position: relative;
-    margin: 0 10px;
-    overflow: hidden;
+  }
 
-    &:before{
-      content:'';
-      width: 150%;
-      height: 100%;
-      display: block;
-      background: rgba(0, 0, 0, 0.42);
-      position: absolute;
-      left: 0;
-      top:0;
-      
-      transition: .5s;
-      transform: translateX(-100%);
-    }
+  .nums{
 
-    &:hover:before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    background-color:#00803190;
+    padding: 20px 15px;
+    border-radius: 100px;
 
-      transform: translateX(0%) ;
+    div{
 
-    }
-
-    img{
-      width: 100%;
+      width: 50%;
       height: auto;
-    }
+      padding: 0 15px;
 
-    h4{
-
-      position: absolute;
-      left: 0;
-      right: 0;
-      top:0;
-      bottom: 0;
-      margin:auto auto;
-      display: block;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-wrap: wrap;
-      font-size: 3vw;
-      letter-spacing: 5px;
-      text-align: center;
-
-    transition: .4s;
-    
-    &:hover{
-      letter-spacing: 7px;
-    }
-     
-      @include mq(xl){
-
-        font-size: 28px;
+      &:nth-of-type(1){
+        border-right: 1px solid white;
       }
 
-      span{
-        font-weight: 100;
-        display: block;
+      a{
+        text-decoration: none;
+
+      }
+
+      p{
+
         width: 100%;
-        opacity: .5;
-        margin-top:15px;
-        letter-spacing: 1px;
-        
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        letter-spacing: 2px;
+
+        span{
+
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          border-radius: 100px;
+          background: white;
+          width:  30px;
+          height: 30px;
+          margin-right: 10px;
+
+          i{
+            color: $coc;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+          }
+        }
       }
 
+      a >span, >span{
+
+        font-size: 12px;
+        color: white;
+        display: block;
+        text-align: center;
+        font-weight: normal;
+        margin-top:10px;
+      }
+
+      a >p{
+
+        transition: .4s;
+        &:hover{
+          color: black;
+        }
+      }
     }
 
   }

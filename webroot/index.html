@@ -92,7 +92,7 @@
                     下請け作業や自主製品の販売利益により、そこで働く人々の生活を支えてる方々を<br>
                     キャリアコーポレーションは応援しています。</p>
 
-            <a href="feature.html" class="linkbtn">キャリアコーポレーションについて<i class="fas fa-chevron-right"></i></a>
+            <a href="feature.html" class="linkbtn">キャリアコーポレーションについて<i class="fa fa-chevron-right"></i></a>
 
         </section>
 
@@ -105,9 +105,42 @@
 
         <section class="cont3">
 
-            
+            <h5>DM業務のすべての作業をお任せ下さい</h5>
+            <p>福祉作業所の皆様のご協力により、丁寧かつ迅速、安価に<br>
+                    制作から発送まで全ての管理を承ります！<br>
+                    まずはお気軽にお問い合わせ下さい！</p>
+        
+            <div class="nums">
+
+                <div class="telnum">
+                    <a href="tel:03-5468-9601">
+                    <p><span><i class="fa fa-phone"></i></span>03-5468-9601</p>
+                    <span>お電話でのお問い合わせ</span>
+                </a>
+                </div>
+
+                <div class="faxnum">
+                    <p><span><i class="fa fa-fax"></i></span>03-5468-9251</p>
+                    <span>ファックスでのお問い合わせ</span>
+                </div>
+            </div>
 
         </section>
+
+        <div class="contactBtn">
+            <span>CONTACT <i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <a href="contact.html">お問い合わせフォームへ<?xml version="1.0" encoding="utf-8"?>
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 453.5 270">
+                    <g id="Layer_2" data-name="Layer 2">
+                      <path id="arrow-head" fill="none" stroke="#fff" stroke-width="20" d="M318.5 10l125 125-125 125" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path id="arrow-body" fill="white" stroke="white" stroke-width="" stroke-miterlimit="0" d="M433 144.5H10a10 10 0 0 1 0-20h423a10 10 0 0 1 0 20z"/>
+                    </g>
+                  </svg>
+                
+                </a>
+        </div>
 
     </div>
 
@@ -128,7 +161,7 @@
         },
     });
 
-    $(".cont1 *, .swiper-slide h2, .page_link ").bind('inview', function (event, isInView, visiblePartX, visiblePartY) {
+    $(".cont1 *, .swiper-slide h2, .page_link, .cont3 *").bind('inview', function (event, isInView, visiblePartX, visiblePartY) {
         if (isInView) { 
             $(this).delay(300).queue(function () {
                 $(this).addClass('move').dequeue();
@@ -139,6 +172,9 @@
 
 </script>
 
+<span id="pagetop">
+        <i class="fa fa-chevron-up"></i>
+</span>
 
 </body>
 

@@ -46,7 +46,17 @@ $fontc: rgb(33, 33, 33);
 @mixin content_padding() {
   padding-top:    100px;
   padding-bottom: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include mq(){
+    padding-top:    50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
+
 
 //inview
 @mixin inview_item() {
@@ -71,6 +81,8 @@ body{
   padding: 0;
   overflow-x: hidden;
   @include noto();
+
+  position: relative;
 }
 
 
@@ -117,9 +129,46 @@ body{
 
 }
 
+#pagetop{
 
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: $coc;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 34000;
 
+  opacity: 0;
+  transition: .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  pointer-events: none;
+  cursor: pointer;
+
+  i{
+    color: white;
+  }
+
+  &.active{
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+
+}
+ 
 @import "cont1";
 @import "cont2";
+@import "cont3";
+@import "contactbtn"; 
 @import "swiper";
 @import "sp_menu";
+  

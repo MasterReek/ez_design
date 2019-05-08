@@ -5,7 +5,7 @@ $breakpoints: (
   'md': 'screen and (max-width: 768px)',
   'lg': 'screen and (max-width: 1024px)',
   'xl': 'screen and (min-width: 1139px)',
-  'gnavbp': 'screen and (max-width: 900px) and (min-width: 769px) ',
+  'gnavbp': 'screen and (max-width: 980px) and (min-width: 769px) ',
 
 ) !default;
 
@@ -31,10 +31,36 @@ $breakpoints: (
 
 @mixin minw() {
   min-width: 800px;
+  @include mq(){
+    min-width: 10px;
+  }
 }
  
+//コーポレートカラー
 $coc: #008030;
- 
+
+//フォントカラー
+$fontc: rgb(33, 33, 33);
+
+//余白
+@mixin content_padding() {
+  padding-top:    100px;
+  padding-bottom: 100px;
+}
+
+//inview
+@mixin inview_item() {
+
+  transition: .6s;
+  transform: translateY(30px);
+  opacity: 0;
+
+  &.move{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
  
 body{
 
@@ -45,179 +71,55 @@ body{
   padding: 0;
   overflow-x: hidden;
   @include noto();
-
 }
 
-.swiper-container{
+
+@import "header";
+
+
+.contentWrapper{
   width: 100%;
   height: auto;
-}
-
-.swiper-slide img{
-  width: 100%;
-  height: auto;
-}
-
-header{
-
-  width: 100%;
-  @include minw();
-  height: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  transition: .2s;
-
-  &.scroll{
-
-    background: rgba(255, 255, 255, 0.8);
-
-    ul{
-
-      li, li a{
-        color: $coc;
-      }
-    }
-  }
-
-  h1{
-    width: 30vw;
-    min-width: 200px;
-    max-width: 300px;;
-    height: auto;
-    display: block;
-
-    img{
-
-      width: 100%;
-      height: auto;
-      max-height: 80px;
-    }
-  }
-
-  ul{
-
-    display: flex;
-    // padding-right: 50px;
-    min-width: 700px;
-    
-    li,li a{
-      margin: 0 10px;
-      color: white;
-      font-size: 14px;
-
-      @include mq(gnavbp){
-        font-size: 1.3vw;
-      }
-
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-  }
 
   @include mq(){
 
-    &.scroll{
-      background: none;
-    }
-    ul{
+    padding-top: 60px;
+  }
+}
 
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top:0;
-      background: rgba(255, 255, 255, 0.831);
+.linkbtn{
 
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: center;
-      z-index: 34999;
+  @include inview_item();
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: $coc;
+  padding: 15px 20px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: .4s;
 
-      transition: .4s;
-      opacity: 0;
-      pointer-events: none;
+  i{
+    margin-left: 10px;
+  }
 
-      &.active{
-        opacity: 1;
-        pointer-events: all;
-      }
+  &:hover{
 
-      li {
-
-        width: 80%;
-        height: 10vh;
-        text-align: center;
-
-
-        a{
-          color: $coc;
-          font-size: 20px;
-          font-weight: bold;
-        }
-
-      }
-
-    }
+  
+    opacity: .8;
+    letter-spacing: 1px;
 
   }
 
 }
 
-.swiper-slide{
-  position: relative;
 
-  h2{
-    font-size: 3vw;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top:35%;
 
-    span{
-      font-size: 12px;
-      font-weight: normal;
-      display: block;
-      margin-top: 15px;
-    }
-
-  }
-}
-
-.bodyimg{
-
-  width: 100%;
-  // max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  background: url(../images/main_bg.jpg);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: left bottom;
-  text-align: center;
-  line-height: 0;
-
-  img{
-
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-
+@import "cont1";
+@import "cont2";
+@import "swiper";
 @import "sp_menu";

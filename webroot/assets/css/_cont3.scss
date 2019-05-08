@@ -1,0 +1,95 @@
+
+.cont3{
+
+  width: 100%;
+  height: auto;
+  @include content_padding();
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:#0080312c;
+
+  .page_link{
+
+    @include inview_item();
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    margin: 0 10px;
+    overflow: hidden;
+
+    &:before{
+      content:'';
+      width: 150%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, 0.42);
+      position: absolute;
+      left: 0;
+      top:0;
+      
+      transition: .5s;
+      transform: translateX(-100%);
+    }
+
+    &:hover:before{
+
+      transform: translateX(0%) ;
+
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    h4{
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top:0;
+      bottom: 0;
+      margin:auto auto;
+      display: block;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      font-size: 3vw;
+      letter-spacing: 5px;
+      text-align: center;
+
+    transition: .4s;
+    
+    &:hover{
+      letter-spacing: 7px;
+    }
+     
+      @include mq(xl){
+
+        font-size: 28px;
+      }
+
+      span{
+        font-weight: 100;
+        display: block;
+        width: 100%;
+        opacity: .5;
+        margin-top:15px;
+        letter-spacing: 1px;
+        
+      }
+
+    }
+
+  }
+
+
+}

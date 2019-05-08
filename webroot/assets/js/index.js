@@ -16,14 +16,14 @@ $(document).ready( function() {
         $('.menu-trigger').toggleClass('active');
         $("header ul").toggleClass('active');
         
-        if(scFlag == false){
-            scFlag = true;
-            scrollStop($(window));
-        } 
-        else{
-            scFlag = false;
-            scrollStart($(window));
-        }
+        // if(scFlag == false){
+        //     scFlag = true;
+        //     scrollStop($(window));
+        // } 
+        // else{
+        //     scFlag = false;
+        //     scrollStart($(window));
+        // }
          
     });
 

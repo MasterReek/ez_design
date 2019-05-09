@@ -21,6 +21,7 @@
 
   h3{
     width: 60%;
+    max-width: 500px;
 
     @include inview_item();
   }

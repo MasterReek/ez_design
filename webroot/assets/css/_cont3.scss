@@ -60,6 +60,7 @@
     background-color:#00803190;
     padding: 20px 15px;
     border-radius: 100px;
+    box-shadow: 0 0 5px white;
 
     @include inview_item();
 
@@ -75,7 +76,7 @@
 
       a{
         text-decoration: none;
-
+        cursor: default;
       }
 
       p{
@@ -124,9 +125,11 @@
       a >p{
 
         transition: .4s;
-        &:hover{
-          color: black;
-        }
+      
+        
+        // &:hover{
+        //   color: black;
+        // }
       }
     }
 

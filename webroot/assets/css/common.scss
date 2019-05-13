@@ -119,6 +119,13 @@ body{
     margin-left: 10px;
   }
 
+  img{
+    margin-left: 10px;
+    width: 16px;
+    height: auto;
+    
+  }
+
   &:hover{
 
   
@@ -129,6 +136,49 @@ body{
 
 }
 
+.eye{
+
+  width: 100%;
+  height: 250px;
+  background: url(../images/eye_bg.jpg);
+  background-size:  cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h2{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 4px gray;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top:30px;
+
+    &:after{
+      content:attr(data-caps);
+      font-weight: 100;
+      display: block;
+      width: 100%;
+      // opacity: .5;
+      margin-top: 15px;
+      letter-spacing: 1px;
+      
+    }
+  }
+
+  @include mq(){
+
+    height: 150px;
+
+    h2{
+      font-size: 20px;
+    }
+  }
+
+}
 
 
 #pagetop{
@@ -155,6 +205,12 @@ body{
     color: white;
   }
 
+  img{
+    width: 80%;
+    height: auto;
+    transition: .2s;
+  }
+
   &.active{
     opacity: 1;
     pointer-events: auto;
@@ -163,6 +219,10 @@ body{
 
   &:hover{
     opacity: .7;
+
+    img{
+      transform: translateY(-3px);
+    }
   }
 
   @include mq(){
@@ -181,4 +241,8 @@ body{
 @import "loader"; 
 @import "swiper";
 @import "sp_menu";
-  
+@import "feature";
+@import "service";
+@import "company";
+@import "contact";
+   

@@ -15,17 +15,19 @@ $(document).ready( function() {
     $(".bMenu").click(function(){
         $('.menu-trigger').toggleClass('active');
         $("header ul").toggleClass('active');
-        
-        // if(scFlag == false){
-        //     scFlag = true;
-        //     scrollStop($(window));
-        // } 
-        // else{
-        //     scFlag = false;
-        //     scrollStart($(window));
-        // }
-         
+
     });
+
+
+  
+        $("form input[type!=image][type!=button][type!=submit][type!=reset],form select").keypress(function(e){
+          if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+            return false;
+          }else{
+            return true;
+          }
+        });
+  
 
 
 });

@@ -13,6 +13,8 @@ footer{
   background-repeat: no-repeat;
   background-position: center bottom 59px;
   position: relative;
+ 
+
 
   .inner{
     width: 100%;
@@ -120,7 +122,7 @@ footer{
     color: white;
     text-align: center;
     background: $coc;
-  transform: translateY(-2px);
+  // transform: translateY(-2px);
   position: absolute;
   left: 0;
   bottom: 0;

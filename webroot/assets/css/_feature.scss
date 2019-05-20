@@ -15,7 +15,7 @@
 
   h3{
     font-size: 26px;
-    color: $coc;
+    color: rgb(31, 31, 31);
     text-align: center;
     line-height: 180%;
     transform: translateY(-30px);
@@ -24,7 +24,7 @@
 
     span{
       // display: block;
-      border-top: 4px solid $coc;
+      border-top: 4px solid  #007780;
       padding-top: 10px;
     }
   }
@@ -61,7 +61,7 @@
 
       span{
         font-weight: bold;
-        color: $coc;
+        color:  #007780;
         display: block;
         margin: 15px 0;
       }

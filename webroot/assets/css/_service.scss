@@ -12,6 +12,7 @@
   h3{
     font-size: 26px;
     color: $coc;
+    color:  rgb(31, 31, 31);
     text-align: center;
     line-height: 180%;
     transform: translateY(-30px);
@@ -20,7 +21,7 @@
 
     span{
       // display: block;
-      border-top: 4px solid $coc;
+      border-top: 4px solid  #007780;
       padding-top: 10px;
     }
   }
@@ -56,9 +57,9 @@
       @include inview_item();
 
       strong{
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
-        color:$coc;
+        color: #007780;
       }
 
       span{
@@ -122,12 +123,12 @@
   height: auto;
   @include content_padding();
 
-  background-color: #dcede2;
+  background-color: #f5f5f5;
 
   h3{
 
     font-size: 26px;
-    color: $coc;
+    color:  rgb(31, 31, 31);
     text-align: center;
     line-height: 180%;
     transform: translateY(-30px);
@@ -140,7 +141,7 @@
 
     span{
       // display: block;
-      border-top: 4px solid $coc;
+      border-top: 4px solid  #007780;
       padding-top: 10px;
     }
   }
@@ -162,7 +163,7 @@
       width: 30%;
       text-align: center;
       padding: 25px;
-      background: rgb(244, 244, 244);
+      background: rgb(255, 255, 255);
       position: relative;
 
       transition: all 0.4s ease-in-out;
@@ -183,7 +184,7 @@
         color: white;
         width:  60px;
         height: 60px;
-        background: $coc;
+ 
         position: absolute;
         left: 0;
         top:0;
@@ -197,9 +198,9 @@
         transition: .4s;
       }
 
-      &:nth-of-type(1):before{content: "1";}
-      &:nth-of-type(2):before{content: "2";}
-      &:nth-of-type(3):before{content: "3";}
+      &:nth-of-type(1):before{content: "1"; background: #007780}
+      &:nth-of-type(2):before{content: "2"; background:#007780}
+      &:nth-of-type(3):before{content: "3"; background:#007780}
 
       &:nth-of-type(1){transition-delay: .2s;}
       &:nth-of-type(2){transition-delay: .3s;}
@@ -209,15 +210,21 @@
       h4{
         font-size: 24px;
         font-weight: bold;
-        color: $coc;
+        color: rgb(45, 45, 45);
         margin-bottom: 30px;
         line-height: 160%;
       }
 
+
+      &:nth-of-type(1) i{ color: #007780}
+      &:nth-of-type(2) i{ color:#007780}
+      &:nth-of-type(3) i{ color:#007780}
+
       i{
         font-size: 80px;
-        color: $coc;
+      
         margin-bottom: 30px;
+  
       }
 
       p{
@@ -298,7 +305,7 @@
 
   @extend .service_cont3;
 
-  background-color: #dcede2;
+  background-color: #fafafa;
 
   ul{
 
@@ -313,17 +320,19 @@
 
     li{
       width: 24%;
-      padding: 20px 0;
+      padding: 20px 0 5px;
       margin: 0.5%;
+      font-size: 12px;
+      border-bottom: 1px solid gray;
+
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
-      background: rgb(232, 232, 232);
-      background: white;
+
       line-height: 180%;
       text-align: center;
-      color: $coc;
+      color: rgb(57, 57, 57);
     }
 
     @include mq(){

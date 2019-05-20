@@ -10,12 +10,12 @@
     font-size: 28px;
     text-align: center;
     letter-spacing: 5px;
-    color: $coc;
+    color: rgb(31, 31, 31);
     @include inview_item();
 
     span{
       // display: block;
-      border-top: 4px solid $coc;
+      border-top: 4px solid #007780;
       padding-top: 10px;
     }
   }
@@ -23,7 +23,7 @@
   dl{
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items:stretch;
     flex-wrap: wrap;
     width: 100%;
@@ -33,12 +33,12 @@
 
     dt,dd{
       padding:25px 0;
-      background: #dcede2;
+      // background: #ebebeb;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      border-bottom: 2px solid white;
+      border-bottom: 1px dashed #007780;
     }
 
     dt{
@@ -47,7 +47,7 @@
     }
 
     dd{
-      width: 80%;
+      width: 78%;
       justify-content: flex-start;
       padding:25px 15px;
       line-height: 180%;

@@ -38,7 +38,7 @@
           display: flex;
           font-size: 36px;
           padding: 20px;
-          background: $coc; //    flex-wrap: wrap;
+        //   background: #007780; 
           align-items: center;
 
           @include inview_item();
@@ -46,6 +46,7 @@
           a {
               text-decoration: none;
               color: #fff;
+              color:  #007780;
           }
 
           dt {
@@ -53,13 +54,14 @@
               height: 80px;
               padding: 15px 20px;
               //            border-radius: 100px;
-              background: #ffffff;
+              background: #007780;;
               /* fallback for old browsers */
-              color: $coc;
+              color: white;
               display: flex;
               justify-content: center;
               align-items: center;
               margin-right: 20px;
+              border-radius: 50px;
 
           }
 
@@ -78,7 +80,7 @@
 
            
 
-              color: white;
+              color: #007780;;
               padding: 10px 0;
 
               span {
@@ -86,7 +88,7 @@
                   display: block;
                   width: 100%;
                   text-align: left;
-                  border-top: 1px solid white;
+                  border-top: 1px solid #007780;;
                   padding-top: 20px;
                   margin-top: 10px;
               }
@@ -139,13 +141,13 @@
         font-size: 28px;
         text-align: center;
         letter-spacing: 5px;
-        color: $coc;
+        color: rgb(31, 31, 31);
         margin-bottom: 60px;
         @include inview_item();
     
         span{
           // display: block;
-          border-top: 4px solid $coc;
+          border-top: 4px solid #007780;
           padding-top: 10px;
         }
       }
@@ -460,7 +462,7 @@
             margin-bottom: 0;
   
   
-            border-bottom: 1px solid $coc;
+            border-bottom: 1px dashed #007780;
   
   
             &:last-of-type{
@@ -530,8 +532,8 @@
 #cfmbtn{
 
     border-bottom: 0px !important;
-    opacity: .2;
-    pointer-events: none;
+    // opacity: .2;
+    // pointer-events: none;
     transition: .2s;
     
     &.active{
@@ -554,29 +556,30 @@
         padding: 0;
         appearance: none;
 
-        padding: 5px 10px;
-        font-size: 18px;
+        padding: 5px 15px;
+        font-size: 16px;
         line-height: 1.3333333;
 
-        background:$coc;
+        background:#007780;
+        border-radius: 50px;
 
         animation: btn 5s ease infinite;
 
 
         color: white;
-        border-radius: 0;
+   
 
 
-        width: 350px;
+        width: auto;
         height: 60px;
-        margin: 30px auto;
+        margin: 20px auto;
         cursor: pointer;
         box-shadow: none;
 
         transition: .2s;
         
         &:hover{
-            background: $coc;
+            background: #008c96;
         }
 
         @include mq(){
@@ -604,7 +607,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        background-color: $coc;
+        background:#007780;
         color: white;
         font-weight: bold;
         font-size: 16px;
@@ -612,6 +615,7 @@
         cursor: pointer;
         outline: none;
         appearance: none;
+        border-radius: 5px;
 
         margin: 0 5px;
         transition: .4s;
@@ -727,10 +731,10 @@
 
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
-    color: $coc;
-    margin: 50px auto;
+    color: black;
+    margin: 50px auto 0;
     
 
     @include mq(){
@@ -741,13 +745,15 @@
         margin: 10px auto;
     }
     a{
-        color: $coc;
+        color: black;
         padding: 10px;
         margin-top:10px;
         display: inline-block;
+        text-decoration: underline;
+        transition: .2s;
     }
     a:hover{
-        background: $coc;
+        background: #007780;
         color: white;
     }
     

@@ -15,7 +15,7 @@ $breakpoints: (
   }
 }
 
-*{
+html *{
     box-sizing: border-box;
 }
 
@@ -26,6 +26,7 @@ $breakpoints: (
 }
  
 @mixin maxw() {
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -72,6 +73,12 @@ $fontc: rgb(33, 33, 33);
 }
 
  
+html{
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+}
+
 body{
 
   width: 100%;
@@ -83,6 +90,12 @@ body{
   @include noto();
 
   position: relative;
+
+  @include mq(){
+
+    width: 100vw;
+   
+  }
 }
 
 
@@ -90,12 +103,16 @@ body{
 
 
 .contentWrapper{
+
   width: 100%;
   height: auto;
 
   @include mq(){
 
+    width: 100vw;
     padding-top: 60px;
+    
+ 
   }
 }
 
@@ -106,7 +123,9 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: white;
-  background: $coc;
+
+
+  background: linear-gradient(to right, #0575E6, #00F260);
   padding: 15px 20px;
   border-radius: 50px;
   display: flex;

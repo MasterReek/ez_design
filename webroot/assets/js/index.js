@@ -18,19 +18,38 @@ $(document).ready( function() {
 
     });
 
+        
+    //Current on current page
+    $('header ul a').each(function(){
+        var $href = $(this).attr('href');
+        if(location.href.match($href)) {
+            $(this).addClass('current');
+        } else {
+            $(this).removeClass('current');
+        }
+    });
+
 
   
-        $("form input[type!=image][type!=button][type!=submit][type!=reset],form select").keypress(function(e){
-          if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
-            return false;
-          }else{
-            return true;
-          }
+    //EnterKeyFix
+    $("form input[type!=image][type!=button][type!=submit][type!=reset],form select").keypress(function(e){
+        if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+        return false;
+        }else{
+        return true;
+        }
+    });
+  
+    if($('#load-target').length){
+        
+        $('#load-target').imagesLoaded(function(){ // id=”container”内の全画像のローディングが完了呼　　
+            LoadWait();
         });
-  
-
-
+    }
+    
 });
+
+
 
 $(window).scroll(function(){
  
@@ -70,9 +89,17 @@ $(window).scroll(function(){
 
 });
 
-$(window).on('load', function(){
+// $(window).on('load', function(){
     
+//     setTimeout(function(){
+//         $('.loader').addClass('active');
+//     },400);
+// });
+
+
+function LoadWait() {
+   
     setTimeout(function(){
         $('.loader').addClass('active');
     },400);
-});
+}

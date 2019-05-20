@@ -349,180 +349,285 @@
       color: #d16090;
   }
 
-  .formcont{
-      width: 100%;
-    //   max-width: 1100px;
-      height: auto;
-      display: block;
-      margin: 50px auto 0;
-      padding: 30px;
-      background: rgb(245, 245, 245);
-      @include inview_item();
+  #CONTACT{
 
-      h4{
-          font-size: 14px;
-      }
-
-
-      form{
-          max-width: 1000px;
-          margin: 0 auto;
-      }
-
-      #selecter{
-          flex-wrap: wrap;
-          font-size: 12px;
-
-          span{
-              font-size: 14px;
-              display: block;
-              width: 100%;
-              padding: 10px;
-
-          }
-      }
-
-      p{
-          font-size: 18px;
-          margin-bottom: 50px;
-          margin-top: 50px;
-          line-height: 180%;
-          text-align: left;
-
-      
-          &.noline{
-              border: 0px;
-          }          
-
-          &.comfirm{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 16px;
-              width: 500px;
-              margin: 0 auto;
-              text-align:center;
-              margin: 30px auto;
-
-              label{
-                  margin-left: 10px;
-                  margin-bottom: 0;
-              }
-          }
-      }
-
-      input[ type='radio']{
-          margin-right: 5px;
-          margin-left: 10px;
-          margin-bottom: 5px;
-      }
-
-      .form-group {
-
-          padding: 30px 0;
-
-          // input[type="text"]:focus,
-          // textarea:focus {
-            
-          // }
-
-          #selecter > label{
-              font-weight: normal;
-              margin-right: 10px;
-          }
-
-          .col-sm-3.control-label{
-
-              font-size: 16px !important;
-              width: 25%;
-              font-weight: normal;
-              //                @include FMIN();
-          }
-
-
-          .col-sm-9{
-              width: 75%;
-              display: flex;
-              align-items: center;
-              font-size: 14px;
-
-
-              select{
-                  margin-left: 10px;
-              }
-          }
-
-          padding: 30px 0;
-          display: flex;
-          align-items: center;
-          margin-bottom: 0;
-
-
-          border-bottom: 1px solid $coc;
-
-
-          &:last-of-type{
-              border-bottom: 0px;
-          }
-
-          &:first-child{
-              border-top: 1px solid $coc;
-
-          }
-
-
-      }//formgroupend
-
-
-
+    .formcont{
+        width: 100%;
+      //   max-width: 1100px;
+        height: auto;
+        display: block;
+        margin: 50px auto 0;
+        padding: 30px;
+        background: rgb(245, 245, 245);
+        @include inview_item();
   
-      @include mq(sm){
-          max-width: 100%;
-          padding: 10px;
-          margin: 10px auto;
-          .form-group{
-
-              flex-wrap: wrap;
-
-              .col-sm-3.control-label{
-
-                  font-size: 16px !important;
-                  font-weight: bold;
+        h4{
+            font-size: 14px;
+        }
+  
+  
+        form{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+  
+        #selecter{
+            flex-wrap: wrap;
+            font-size: 12px;
+  
+            span{
+                font-size: 14px;
+                display: block;
+                width: 100%;
+                padding: 10px;
+  
+            }
+        }
+  
+        p{
+            font-size: 18px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            line-height: 180%;
+            text-align: left;
+  
+        
+            &.noline{
+                border: 0px;
+            }          
+  
+            &.comfirm{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                width: 500px;
+                margin: 0 auto;
+                text-align:center;
+                margin: 30px auto;
+  
+                label{
+                    margin-left: 10px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+  
+        input[ type='radio']{
+            margin-right: 5px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+  
+        .form-group {
+  
+            padding: 30px 0;
+  
+            // input[type="text"]:focus,
+            // textarea:focus {
               
-                  width: 100%;
-                  text-align: center;
-                  border-bottom: 1px solid #ebebeb;
-                  margin-bottom: 10px;
-                  padding-bottom: 10px;
-
-              }
-
-
-              .col-sm-9{
-                  width: 100%;
-
-
-                  select{
-                      margin-left: 10px;
-                  }
-              }
-          }
-      }
-
-    
-
-  }//formcontEnd
-
-  .form-control {
-      height: auto;
-      padding: 14px;
-  }
+            // }
   
-  .form-control:focus {
-      border-color: $coc;
-      outline: 0;
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $coc;
+            #selecter > label{
+                font-weight: normal;
+                margin-right: 10px;
+            }
+  
+            .col-sm-3.control-label{
+  
+                font-size: 16px !important;
+                width: 25%;
+                font-weight: normal;
+                //                @include FMIN();
+            }
+  
+  
+            .col-sm-9{
+                width: 75%;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+  
+  
+                select{
+                    margin-left: 10px;
+                }
+            }
+  
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+  
+  
+            border-bottom: 1px solid $coc;
+  
+  
+            &:last-of-type{
+                border-bottom: 0px;
+            }
+  
+            &:first-child{
+                border-top: 1px solid $coc;
+  
+            }
+  
+  
+        }//formgroupend
+  
+  
+  
+    
+        @include mq(sm){
+            max-width: 100%;
+            padding: 10px;
+            margin: 10px auto;
+            .form-group{
+  
+                flex-wrap: wrap;
+  
+                .col-sm-3.control-label{
+  
+                    font-size: 16px !important;
+                    font-weight: bold;
+                
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 1px solid #ebebeb;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+  
+                }
+  
+  
+                .col-sm-9{
+                    width: 100%;
+  
+  
+                    select{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+  
+      
+  
+    }//formcontEnd
+  
+    .form-control {
+        height: auto;
+        padding: 14px;
+    }
+    
+    .form-control:focus {
+        border-color: $coc;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $coc;
+    }
+
+    //送信確認ボタン
+#cfmbtn{
+
+    border-bottom: 0px !important;
+    opacity: .2;
+    pointer-events: none;
+    transition: .2s;
+    
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .btn-lg{
+        text-align: center;
+        margin:  0 auto;
+
+    }
+
+    .btn-lg, .btn-group-lg > .btn {
+
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+
+        padding: 5px 10px;
+        font-size: 18px;
+        line-height: 1.3333333;
+
+        background:$coc;
+
+        animation: btn 5s ease infinite;
+
+
+        color: white;
+        border-radius: 0;
+
+
+        width: 350px;
+        height: 60px;
+        margin: 30px auto;
+        cursor: pointer;
+        box-shadow: none;
+
+        transition: .2s;
+        
+        &:hover{
+            background: $coc;
+        }
+
+        @include mq(){
+
+          margin: 5px auto;
+        }
+
+    }
+
+}
+
+//進む、戻るボタン
+.btn_space{
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    button{
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $coc;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        appearance: none;
+
+        margin: 0 5px;
+        transition: .4s;
+
+        &:hover{
+            opacity: .7;
+        }
+
+    }
+
+
+}
+
   }
+
+
 
   #PPL{
 
@@ -684,101 +789,3 @@
 
 
 
-//送信確認ボタン
-#cfmbtn{
-
-    border-bottom: 0px;
-    opacity: .2;
-    pointer-events: none;
-    transition: .2s;
-    
-    &.active{
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    .btn-lg{
-        text-align: center;
-        margin:  0 auto;
-
-    }
-
-    .btn-lg, .btn-group-lg > .btn {
-
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        padding: 0;
-        appearance: none;
-
-        padding: 5px 10px;
-        font-size: 18px;
-        line-height: 1.3333333;
-
-        background:$coc;
-
-        animation: btn 5s ease infinite;
-
-
-        color: white;
-        border-radius: 0;
-
-
-        width: 350px;
-        height: 60px;
-        margin: 30px auto;
-        cursor: pointer;
-        box-shadow: none;
-
-        transition: .2s;
-        
-        &:hover{
-            background: $coc;
-        }
-
-        @include mq(){
-
-          margin: 5px auto;
-        }
-
-    }
-
-}
-
-//進む、戻るボタン
-.btn_space{
-
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    button{
-        padding: 15px 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        background-color: $coc;
-        color: white;
-        font-weight: bold;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        appearance: none;
-
-        margin: 0 5px;
-        transition: .4s;
-
-        &:hover{
-            opacity: .7;
-        }
-
-    }
-
-
-}

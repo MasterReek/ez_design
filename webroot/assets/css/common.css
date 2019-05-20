@@ -3,6 +3,7 @@
 html * { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 a[href^="tel:"] { pointer-events: none; }
+@media screen and (max-width: 768px) { a[href^="tel:"] { pointer-events: all; } }
 
 @media print { html, body { max-width: 210mm; top: 0 !IMPORTANT; left: 0 !IMPORTANT; width: 200mm !IMPORTANT; }
   @page { html, body { size: A4; margin: 0; } } }
@@ -20,7 +21,7 @@ header.scroll ul li, header.scroll ul li a { color: #343434; }
 header h1 { width: 30vw; min-width: 200px; max-width: 300px; height: auto; display: block; }
 header h1 img { width: 100%; height: auto; max-height: 80px; }
 header ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
-header ul li, header ul li a { margin: 0 10px; color: white; font-size: 14px; font-weight: bold; text-decoration: none; }
+header ul li, header ul li a { margin: 0 10px; color: #343434; font-size: 14px; font-weight: bold; text-decoration: none; }
 @media screen and (max-width: 980px) and (min-width: 769px) { header ul li, header ul li a { font-size: 1.3vw; } }
 header ul li:hover, header ul li a:hover { text-decoration: underline; }
 header ul li.current, header ul li a.current { text-decoration: underline; }
@@ -139,6 +140,7 @@ header ul li.current, header ul li a.current { text-decoration: underline; }
   .contactBtn a span, .contactBtn a img { display: none; } }
 
 footer { width: 100%; height: auto; padding: 60px 0px 180px; background: url(../images/footer_bg.svg); background-size: 100% auto; background-repeat: no-repeat; background-position: center bottom 59px; position: relative; }
+@media print { footer { background-image: none; } }
 footer .inner { width: 100%; max-width: 1000px; margin: 0 auto; height: auto; padding: 0 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; -ms-flex-line-pack: end; align-content: flex-end; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 footer .footlogo { width: 170px; }
 footer .footlogo img { width: 100%; }

@@ -14,6 +14,11 @@ footer{
   background-position: center bottom 59px;
   position: relative;
  
+  @media print {
+    
+    background-image: none;
+    
+  }
 
 
   .inner{

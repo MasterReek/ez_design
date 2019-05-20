@@ -21,7 +21,14 @@ html *{
 
 a[href^="tel:"] {
   pointer-events: none;
+
+  @include mq(){
+    pointer-events: all;
+  }
+  
 }
+
+
 
 html,
 body {

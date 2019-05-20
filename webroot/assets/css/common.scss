@@ -19,15 +19,38 @@ html *{
     box-sizing: border-box;
 }
 
+a[href^="tel:"] {
+  pointer-events: none;
+}
+
+html,
+body {
+    @media print {
+        max-width: 210mm;
+        top: 0 !IMPORTANT;
+        left: 0 !IMPORTANT;
+        width: 200mm !IMPORTANT;
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    }
+}
+
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 @mixin noto() {
   font-family: 'Noto Sans JP', sans-serif;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+
 }
  
 @mixin maxw() {
   width: 100%;
   max-width: 1200px;
+
+
 }
 
 @mixin minw() {
@@ -84,6 +107,7 @@ html{
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+
 }
 
 body{

@@ -4,6 +4,12 @@ header{
     // @include minw();
     height: auto;
     position: fixed;
+
+
+    @media print {
+     position: absolute;
+    }
+
     left: 0;
     top: 0;
     z-index: 1000;

@@ -92,11 +92,18 @@
   padding-bottom: 36.25%;    /* padding-topでもOK */
   overflow: hidden;
   margin-top:80px;
-}
-.google-map iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;    /* 必要であれば!importantを付けてください */
-  height: 100%;    /* 必要であれば!importantを付けてください */
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    /* 必要であれば!importantを付けてください */
+    height: 100%;    /* 必要であれば!importantを付けてください */
+  }
+
+  @include mq(){
+
+    padding-bottom: 56.25%;
+
+  }
 }

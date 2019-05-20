@@ -141,48 +141,6 @@
                                 <a href="privacy.html" target="_blank">個人情報保護方針</a>
                             </div>
 
-
-<!-- 
-                            <div id="CFM">
-                                <input type="checkbox" id="agree" value="agree">
-                                <label for="agree">上記の個人情報の取扱に同意する</label>
-
-                                <script type="text/javascript">
-
-                                    $(function () {
-
-                                        var agreeFlag = localStorage.getItem("agree");
-                                        if (agreeFlag == 1) {
-                                            $('#cfmbtn').prop('disabled', true);
-                                            $('#agree').prop("checked",true);
-                                            $('#cfmbtn').addClass('active');
-                                        }
-
-                                        if (!$("#agree").prop('checked')) {
-                                            $('#cfmbtn').prop('disabled', true);
-                                        }
-                       
-
-                                        $('#agree').on('click', function () {
-
-                                            if ($(this).prop('checked') == false) {
-                                                $('#cfmbtn').removeClass('active');
-                                                localStorage.setItem('agree', '0');
-
-                                            } else {
-
-                                                $('#cfmbtn').addClass('active');
-                                                localStorage.setItem('agree', '1');
-                                            }
-
-                                        });
-
-                                    });
-
-                                </script>
-
-                            </div> -->
-
                             <div class="form-group" id="cfmbtn">
                                 <button class="btn btn-block btn-lg">上記の利用目的および取り扱いに同意の上、入力内容を確認する</button>
                             </div>

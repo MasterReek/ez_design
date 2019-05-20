@@ -1,0 +1,644 @@
+#CONTACT{
+    
+  #main{
+
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding: 0;
+     
+
+      .inner{
+          padding: 80px 0;
+          width: 1000px;
+          margin: 0 auto;
+
+
+          @include mq(){
+              width: 100%;
+              padding: 20px 0;
+          }
+      }
+
+
+      .telfaxcont{
+        padding:15px;
+      }
+    
+      .telfax {
+
+          width: 48%;
+          margin-bottom: 15px;
+          display: flex;
+          font-size: 36px;
+          padding: 20px;
+          background: $coc; //    flex-wrap: wrap;
+          align-items: center;
+
+          @include inview_item();
+
+          a {
+              text-decoration: none;
+              color: #fff;
+          }
+
+          dt {
+              width: 80px;
+              height: 80px;
+              padding: 15px 20px;
+              //            border-radius: 100px;
+              background: #ffffff;
+              /* fallback for old browsers */
+              color: $coc;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 20px;
+
+          }
+
+          dd {
+              width: calc(100% - 100px);
+              height: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              flex-wrap: wrap;
+              font-size: 3vw;
+
+              @include mq(xl){
+                font-size: 26px;
+              }
+
+           
+
+              color: white;
+              padding: 10px 0;
+
+              span {
+                  font-size: 14px;
+                  display: block;
+                  width: 100%;
+                  text-align: left;
+                  border-top: 1px solid white;
+                  padding-top: 20px;
+                  margin-top: 10px;
+              }
+
+
+            }
+
+            @include mq(){
+
+              padding: 10px;
+
+            
+
+                dd{
+                  span{
+                    font-size: 10px;
+                  }
+                }
+
+              }
+            
+
+      }
+
+      #FORMBOX{
+
+          max-width: 1000px;
+          width: 100%;
+          padding: 80px 80px 0  ;
+          box-sizing: border-box;
+
+          position: relative;
+          // z-index: 1000;
+          margin-bottom: 80px;
+          margin-top:-40px;
+          background: white;
+          border-radius: 10px;
+
+          @include mq(){
+              width: 100%;
+              padding: 0px;
+              margin-bottom: 10px;
+              margin-top:0;
+          }
+      }
+
+
+    
+      h3{
+
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: 5px;
+        color: $coc;
+        margin-bottom: 60px;
+        @include inview_item();
+    
+        span{
+          // display: block;
+          border-top: 4px solid $coc;
+          padding-top: 10px;
+        }
+      }
+
+      #telfaxbox{
+
+        width: 100%;
+        max-width: 800px;
+        margin:  0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      @media all and (max-width: 768px) {
+
+          .telfax{
+
+              width: 100%;
+          }
+
+          #telfaxbox{
+              flex-wrap: wrap;
+
+              dl{
+             
+                  dd{
+                      font-size: 26px;
+                  }
+              }
+          }
+      }
+
+      @include mq(sm){
+          padding-top: 0;
+
+          h3{
+              font-size: 22px;
+              display: block;
+              text-align: center;
+          }
+
+
+          .telfaxwrap{
+              padding: 0;
+          }
+          
+          #telfaxbox{
+              flex-wrap: wrap;
+              
+              dl{
+                  
+                  dt{
+                      width: 60px;
+                      height: 60px;
+                      
+                  }
+                  
+                  dd{
+                      
+                      width: calc(100% - 60px);
+                      font-size: 18px;
+                      
+                      span{
+                          margin-top: 10px;
+                          padding-top: 10px;
+                      }
+                  }
+              }
+          }
+          .telfax{
+              width: 100%;
+              
+              
+          }
+      }
+
+
+      padding-bottom: 0;
+  }
+
+
+
+  #halfbox {
+      width: 100%;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      p {
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 180%;
+          color: #484848;
+      }
+
+      h4 {
+          font-size: 20px;
+          font-weight: normal;
+          padding-left: 15px;
+          border-left: 5px solid $coc;
+          margin-bottom: 20px;
+          line-height: normal;
+      }
+
+      > div {
+          width: 60%;
+          display: block;
+      }
+
+      div:first-of-type {
+          width: 30%;
+      }
+
+      ul {
+          margin-top: 20px;
+          li {
+              margin-top: 15px;
+
+              a {
+                  color: #0d487c;
+                  font-size: 12px;
+              }
+          }
+      }
+  }
+
+
+  #telfaxText {
+
+      text-align: left;
+      line-height: 230%;
+      padding: 15px;
+      font-size: 18px;
+
+  }
+
+  #docs {
+      i {
+          margin-right: 10px;
+      }
+  }
+
+  aside ol{
+      li{
+          text-align: left;
+          margin-bottom: 15px;
+          line-height: normal;
+          font-size: 14px;
+
+      }
+
+      &.list_parentheses{
+          padding:0 0 0 0em;
+          margin:0;
+      }
+
+      &.list_parentheses li{
+          list-style-type:none;
+          list-style-position:outside;
+          counter-increment: cnt;
+      }
+
+      &.list_parentheses li:before{
+          display: marker;
+          content: "(" counter(cnt) ") ";
+      }
+  }
+
+  .MAILFORM{
+
+      p{
+          line-height: 180%;
+          font-size: 16px;
+          text-align: center;
+
+          @include mq(){
+
+            text-align: left;
+            padding: 15px;
+          }
+      }
+  }
+
+  .need{
+      color: #d16090;
+  }
+
+  .formcont{
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      display: block;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+
+
+      #selecter{
+          flex-wrap: wrap;
+          font-size: 12px;
+
+          span{
+              font-size: 14px;
+              display: block;
+              width: 100%;
+              padding: 10px;
+
+          }
+      }
+
+      p{
+          font-size: 18px;
+          margin-bottom: 50px;
+          margin-top: 50px;
+          line-height: 180%;
+          text-align: left;
+
+          border-bottom: 1px solid $coc;
+
+          &.noline{
+              border: 0px;
+          }          
+
+          &.comfirm{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 16px;
+              width: 500px;
+              margin: 0 auto;
+              text-align:center;
+              margin: 30px auto;
+
+              label{
+                  margin-left: 10px;
+                  margin-bottom: 0;
+              }
+          }
+      }
+
+      input[ type='radio']{
+          margin-right: 5px;
+          margin-left: 10px;
+          margin-bottom: 5px;
+      }
+
+      .form-group {
+
+          padding: 30px 0;
+
+          // input[type="text"]:focus,
+          // textarea:focus {
+            
+          // }
+
+          #selecter > label{
+              font-weight: normal;
+              margin-right: 10px;
+          }
+
+          .col-sm-3.control-label{
+
+              font-size: 16px !important;
+              width: 25%;
+              font-weight: normal;
+              //                @include FMIN();
+          }
+
+
+          .col-sm-9{
+              width: 75%;
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+
+
+              select{
+                  margin-left: 10px;
+              }
+          }
+
+          padding: 30px 0;
+          display: flex;
+          align-items: center;
+          margin-bottom: 0;
+
+
+          border-bottom: 1px solid $coc;
+
+          &:last-of-type{
+              border-bottom: 0px;
+          }
+
+          &:first-child{
+              border-top: 1px solid $coc;
+
+          }
+
+
+      }//formgroupend
+
+      .form-group#cfmbtn{
+
+
+          border-bottom: 0px;
+          
+          opacity: .2;
+          pointer-events: none;
+          
+          &.active{
+              opacity: 1;
+              pointer-events: all;
+          }
+
+          .btn-lg{
+              text-align: center;
+              margin:  0 auto;
+
+          }
+
+          .btn-lg, .btn-group-lg > .btn {
+
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              outline: none;
+              padding: 0;
+              appearance: none;
+
+              padding: 5px 10px;
+              font-size: 18px;
+              line-height: 1.3333333;
+
+              background:$coc;
+
+              animation: btn 5s ease infinite;
+
+
+              color: white;
+              border-radius: 0;
+
+
+              width: 350px;
+              height: 60px;
+              margin: 30px auto;
+              cursor: pointer;
+              box-shadow: none;
+
+              transition: .2s;
+              
+              &:hover{
+                  background: $coc;
+              }
+
+          }
+
+      }
+
+      @include mq(sm){
+          max-width: 100%;
+          padding: 10px;
+          margin: 10px auto;
+          .form-group{
+
+              flex-wrap: wrap;
+
+              .col-sm-3.control-label{
+
+                  font-size: 16px !important;
+                  font-weight: bold;
+              
+                  width: 100%;
+                  text-align: center;
+                  border-bottom: 1px solid #ebebeb;
+                  margin-bottom: 10px;
+                  padding-bottom: 10px;
+
+              }
+
+
+              .col-sm-9{
+                  width: 100%;
+
+
+                  select{
+                      margin-left: 10px;
+                  }
+              }
+          }
+      }
+
+    
+
+  }//formcontEnd
+
+  .form-control {
+      height: auto;
+      padding: 14px;
+  }
+  
+  .form-control:focus {
+      border-color: $coc;
+      outline: 0;
+
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $coc;
+  }
+
+  #PPL{
+
+      width: 100%;
+      height: auto;
+      padding: 30px 0;
+
+
+      h5{
+
+          font-size: 22px;
+          font-weight: bold;
+          color: #434343;
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #59493f;
+          // width: 30%;
+
+      }
+
+      .pptext{
+          width: 100%;
+          height: 200px;
+          padding: 25px;
+          border: 1px solid #bebebe;
+          overflow-y: auto;
+
+          p{
+              margin: 10px 0 30px 0;
+              padding: 15px 0;
+              font-size: 12px;
+          }
+
+          strong{
+              font-size: 14px;
+              font-weight: normal;
+              margin-bottom: 15px;
+          }
+      }
+
+  }
+  
+  #CFM{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      > *{
+          margin: 0;
+          padding: 0;
+      }
+      
+      
+      label{
+          margin-left: 10px;
+          font-size: 16px;
+      }
+  }
+
+  @include mq(){
+      
+      #main{
+
+        
+        margin-top:60px;
+
+    
+          
+          h3{
+              font-size: 18px;
+              line-height: 180%;
+              margin: 20px 0;
+              
+          }
+      }
+
+      #PPL{
+
+          h5{
+              width: 80%;
+              font-size: 16px;
+          }
+      }
+      
+  }
+}
+

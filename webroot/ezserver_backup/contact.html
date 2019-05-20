@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="description"
+        content="東京都渋谷区の株式会社キャリアコーポレーションの会社案内。1999年の設立以来、DM事業(封入、バルク分け、局出し、名簿の手配、宛名ラベルの打ち出し)を展開して おります。">
+    <meta name="keywords" content="DM,ダイレクトメール,封入作業,宛名印字,宛名印刷,発送代行,料金,キャリアコーポレーション">
+    <meta name="format-detection" content="telephone=no">
+    <title>会社案内|DMの封入・宛名印刷・発送代行</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link href="assets/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!--IMPORT JQ JS -->
+    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script type="text/javascript" src="assets/js/ajaxzip3.js"></script>
+
+
+</head>
+
+
+<body id="CONTACT">
+
+    <div class="bMenu">
+        <a class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+
+    <header>
+        <h1><a href="/index.html"><img src="assets/images/headlogo.png" alt="株式会社キャリアコーポレーションの会社案内"></a></h1>
+        <ul>
+            <li><a href="/index.html">ホーム</a></li>
+            <li><a href="/feature.html">キャリアコーポレーションについて</a></li>
+            <li><a href="/service.html">業務内容</a></li>
+            <li><a href="/company.html">会社案内</a></li>
+            <li><a href="/contact.html">お問い合わせ</a></li>
+        </ul>
+    </header>
+
+    <div class="contentWrapper">
+
+        <div class="eye">
+            <h2 data-caps="Contact Form">お問い合わせ</h2>
+        </div>
+
+
+        <div id="main">
+
+            <div id="FORMBOX" class="inner">
+
+                <h3><span>お問い合わせフォーム</span></h3>
+
+                <section class="MAILFORM">
+
+                    <p class="contact_read">内容を確認次第、担当者よりご連絡させていただきます。<br>
+                        尚、メールフォームからのお問い合わせの場合、お客さまからいただいたメールアドレスが違っていたり、<br>
+                        システム障害などによりお返事できない場合がございます。<br>
+                        返答のない場合は、お電話でその旨お問い合わせください。<br>
+                        お問い合わせ内容は、フォームにご記入頂きましたメールアドレス宛にも自動返送されます。<br>
+                    </p>
+
+
+
+                    <div class="formcont">
+
+                        <form class="form-horizontal" method="post" action="contact/postmail">
+                            <h4><span class="need">※</span>印は必須項目となっております。</h4>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="NAME">お名前（会社名） 　
+                                  <span class="need">※</span></label>
+                                <div class="col-sm-9">
+                                    <input name="word1" id="NAME" type="text" value="" class="form-control" placeholder="入力例）　山田　太郎　　">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="ZIPCODE">郵便番号</label>
+                                <div class="col-sm-9">
+                                    <input name="word2" id="ZIPCODE" type="text" value="" class="form-control"
+                                        onkeyup="AjaxZip3.zip2addr(this, '', 'word3', 'word3');"
+                                        placeholder="（半角入力　例：150-0011）">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="ADD">ご住所</label>
+                                <div class="col-sm-9">
+                                    <input name="word3" id="ADD" type="text" value="" class="form-control"
+                                        placeholder="（例：東京都渋谷区東2-20-13-313)">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label " for="TEL">電話番号</label>
+                                <div class="col-sm-9">
+                                    <input name="word4" id="TEL" type="text" value="" class="form-control" placeholder="（半角入力　例：012-345-6789　携帯可）">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="EMAIL">メールアドレス　
+                                  <span class="need">※</span></label>
+                                <div class="col-sm-9">
+                                    <input id="EMAIL" name="word5" type="email" class="form-control"
+                                        placeholder="入力例） sample@exsample.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="naiyou">お問い合わせ内容　
+                                  <span class="need">※</span></label>
+                                <div class="col-sm-9">
+                                    <textarea id="naiyou" rows="5" class="form-control" name="word6" placeholder="お問い合わせ内容をご記入下さい"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="pplink">
+                                <h4>※ご記入いただいた個人情報は、お問い合わせへの回答・連絡のみに利用いたします。</h4>
+
+                                <a href="/privacy.html" target="_blank">個人情報保護方針</a>
+                            </div>
+
+
+
+                            <div id="CFM">
+                                <input type="checkbox" name="word7" id="agree" value="同意する">
+                                <label for="agree">上記の個人情報の取扱に同意する</label>
+
+                                <script type="text/javascript">
+
+                                    $(function () {
+
+                                        var agreeFlag = localStorage.getItem("agree");
+                                        if (agreeFlag == 1) {
+                                            $('#cfmbtn').prop('disabled', true);
+                                            $('#agree').prop("checked",true);
+                                            $('#cfmbtn').addClass('active');
+                                        }
+
+                                        if (!$("#agree").prop('checked')) {
+                                            $('#cfmbtn').prop('disabled', true);
+                                        }
+
+
+                                        $('#agree').on('click', function () {
+
+                                            if ($(this).prop('checked') == false) {
+                                                $('#cfmbtn').removeClass('active');
+                                                localStorage.setItem('agree', '0');
+
+                                            } else {
+
+                                                $('#cfmbtn').addClass('active');
+                                                localStorage.setItem('agree', '1');
+                                            }
+
+                                        });
+
+                                    });
+
+                                </script>
+
+                            </div>
+
+                            <div class="form-group" id="cfmbtn">
+                                <button type="submit" class="btn btn-block btn-lg">送信確認画面へ</button>
+                            </div>
+
+
+
+
+                        </form>
+
+                    </div>
+
+
+                </section>
+
+            </div>
+
+
+            <section class="telfaxcont">
+
+                <h3><span>お電話・FAXでのお問合せ</span></h3>
+
+                <section>
+
+                    <div id="telfaxbox" class="move">
+
+                        <dl class="telfax move">
+                            <dt class="move"><i class="fa fa-phone move" aria-hidden="true"></i></dt>
+                            <dd class="move"><a href="tel:03-5468-9601　" class="move">03-5468-9601　</a><span
+                                    class="move">受付時間：平日　9:00〜18:00</span></dd>
+                        </dl>
+
+                        <dl class="telfax move">
+                            <dt class="move"><i class="fa fa-fax move" aria-hidden="true"></i></dt>
+                            <dd class="move">03-5468-9251<span class="move">２４時間受け付け</span></dd>
+                        </dl>
+
+                    </div>
+
+                </section>
+            </section>
+        </div>
+
+
+    </div>
+
+    <footer>
+
+        <div class="inner">
+            <img src="assets/images/footlogo.svg" alt="株式会社キャリアコーポレーション" class="footlogo">
+
+            <div class="blocks">
+
+                <div class="b_inner">
+
+                    <p>〒150-0011<br>
+                        東京都渋谷区東2-20-13-313<br>
+                        TEL 03-5468-9601 FAX 03-5468-9251</p>
+                    <img src="assets/images/footbanner.svg" alt="福祉とともに取り組み２０余年">
+                </div>
+
+                <ul>
+                    <li><a href="/index.html"> <i class="fa fa-caret-right"></i>ホーム</a></li>
+                    <li><a href="/feature.html"><i class="fa fa-caret-right"></i>キャリアコーポレーションについて</a></li>
+                    <li><a href="/service.html"><i class="fa fa-caret-right"></i>業務内容</a></li>
+                    <li><a href="/company.html"><i class="fa fa-caret-right"></i>会社案内</a></li>
+                    <li><a href="/contact.html"><i class="fa fa-caret-right"></i>お問い合わせ</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <small>©2019 株式会社キャリアコーポレーション</small>
+
+    </footer>
+
+
+
+    <script>
+
+        $("#main * ").bind('inview', function (event, isInView, visiblePartX, visiblePartY) {
+            if (isInView) {
+                $(this).delay(300).queue(function () {
+                    $(this).addClass('move').dequeue();
+                });
+
+            }
+        });
+
+    </script>
+
+    <span id="pagetop"><img src="assets/images/arrow_up.svg" alt="pagetop"></span>
+
+</body>
+
+</html>

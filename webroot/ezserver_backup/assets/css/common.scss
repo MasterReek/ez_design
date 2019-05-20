@@ -15,47 +15,18 @@ $breakpoints: (
   }
 }
 
-html *{
+*{
     box-sizing: border-box;
-}
-
-a[href^="tel:"] {
-  pointer-events: none;
-
-  @include mq(){
-    pointer-events: all;
-  }
-  
-}
-
-
-html,
-body {
-    @media print {
-        max-width: 210mm;
-        top: 0 !IMPORTANT;
-        left: 0 !IMPORTANT;
-        width: 200mm !IMPORTANT;
-
-        @page {
-            size: A4;
-            margin: 0;
-        }
-    }
 }
 
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 @mixin noto() {
   font-family: 'Noto Sans JP', sans-serif;
-  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
-
 }
  
 @mixin maxw() {
-  width: 100%;
   max-width: 1200px;
-
 }
 
 @mixin minw() {
@@ -98,23 +69,9 @@ $fontc: rgb(33, 33, 33);
     transform: translateY(0px);
     opacity: 1;
   }
-
-  @media print {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
  
-html{
-  width: 100vw;
-  height: auto;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-
-}
-
 body{
 
   width: 100%;
@@ -126,12 +83,6 @@ body{
   @include noto();
 
   position: relative;
-
-  @include mq(){
-
-    width: 100vw;
-   
-  }
 }
 
 
@@ -139,16 +90,12 @@ body{
 
 
 .contentWrapper{
-
   width: 100%;
   height: auto;
 
   @include mq(){
 
-    width: 100vw;
     padding-top: 60px;
-    
- 
   }
 }
 
@@ -159,9 +106,7 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: white;
-
-  background: linear-gradient(to right, #0575E6, rgb(29, 237, 181));
-  background: #007780;
+  background: $coc;
   padding: 15px 20px;
   border-radius: 50px;
   display: flex;
@@ -174,15 +119,9 @@ body{
     margin-left: 10px;
   }
 
-  img{
-    margin-left: 10px;
-    width: 16px;
-    height: auto;
-    
-  }
-
   &:hover{
 
+  
     opacity: .8;
     letter-spacing: 1px;
 
@@ -240,7 +179,7 @@ body{
   width: 40px;
   height: 40px;
   display: block;
-  background: rgb(230, 230, 230);
+  background: $coc;
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -259,12 +198,6 @@ body{
     color: white;
   }
 
-  img{
-    width: 80%;
-    height: auto;
-    transition: .2s;
-  }
-
   &.active{
     opacity: 1;
     pointer-events: auto;
@@ -273,10 +206,6 @@ body{
 
   &:hover{
     opacity: .7;
-
-    img{
-      transform: translateY(-3px);
-    }
   }
 
   @include mq(){
@@ -286,6 +215,7 @@ body{
 
 }
   
+
 @import "cont1";
 @import "cont2";
 @import "cont3";

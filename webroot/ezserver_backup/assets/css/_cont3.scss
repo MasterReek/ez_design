@@ -11,15 +11,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color:rgb(0, 138, 162);
- 
+  background-color:$coc;
   background-image: url(../images/contact_bg.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right center;
 
 
-  h5,h4{
+  h5{
     font-size: 28px;
     color: white;
     font-weight: normal;
@@ -27,7 +26,7 @@
     border: 2px solid white;
     border-radius: 100px;
     letter-spacing: 2px;
-    // background-color:#0080312c;
+    background-color:#0080312c;
     @include inview_item();
 
     br{
@@ -58,11 +57,9 @@
     flex-wrap: wrap;
     width: 90%;
     max-width: 1000px;
-    // background-color:#00803190;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color:#00803190;
     padding: 20px 15px;
     border-radius: 100px;
-    box-shadow: 0 0 5px white;
 
     @include inview_item();
 
@@ -78,7 +75,7 @@
 
       a{
         text-decoration: none;
-        cursor: default;
+
       }
 
       p{
@@ -106,7 +103,7 @@
           margin-right: 10px;
 
           i{
-            color: #007780;
+            color: $coc;
             font-size: 18px;
             margin: 0;
             padding: 0;
@@ -127,11 +124,9 @@
       a >p{
 
         transition: .4s;
-      
-        
-        // &:hover{
-        //   color: black;
-        // }
+        &:hover{
+          color: black;
+        }
       }
     }
 
@@ -172,37 +167,6 @@
 
       div{
         width: 100%;
-
-
-        p{
-
-          width: 100%;
-          font-size: 30px;
-          font-weight: bold;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          letter-spacing: 2px;
-  
-          span{
-  
-         
-            width:  50px;
-            height: 50px;
-            margin-right: 0px;
-            margin-bottom: 10px;
-  
-            i{
-              color: #007780;
-              font-size: 24px;
-              margin: 0;
-              padding: 0;
-            }
-          }
-        }
-
 
         &:nth-of-type(1){
           border-right: 0px;

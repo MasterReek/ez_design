@@ -38,7 +38,7 @@
     @include mq(){
 
       img{
-        width: 20vw;
+        width: 30vw;
         margin-top: -75px;
       }
     }
@@ -63,7 +63,7 @@
 
 
   @include mq(){
-    margin: 5vw auto;
+    margin: 10vw auto;
   }
 }
 

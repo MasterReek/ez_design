@@ -9,9 +9,8 @@
   height: auto;
   @include content_padding();
 
-
-
   h3{
+
     font-size: 26px;
     color: $coc;
     color:  rgb(31, 31, 31);
@@ -251,8 +250,13 @@
   @include mq(){
 
     h3{
+
       margin-bottom: 30px;
+      margin: 30px auto;
       font-size: 24px;
+      border-top: 4px solid  #007780;
+      padding-top: 10px;
+
 
       br{
         display: inline;

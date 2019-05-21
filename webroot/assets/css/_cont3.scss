@@ -3,16 +3,12 @@
 
   width: 100%;
   height: auto;
-
   padding: 60px 20px;
-
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color:rgb(0, 138, 162);
- 
   background-image: url(../images/contact_bg.png);
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -20,6 +16,7 @@
 
 
   h5,h4{
+
     font-size: 28px;
     color: white;
     font-weight: normal;
@@ -143,12 +140,39 @@
     // background-color: black;
     padding: 30px 20px;
 
-    h5{
-      font-size: 18px;
+    h4{
+
+      // font-size: 6.5vw;
+      // line-height: 160%;
+      // text-align: center;
+      // background: rgba(0, 0, 0, 0.673);
+      font-size: 6.5vw;
       line-height: 180%;
       text-align: center;
-      background: $coc;
+      border: 0px;
+      padding: 0px;
       width: 100%;
+      font-weight: bold;
+      color: #007780;
+      text-shadow: 0 0 5px white;
+
+      br{
+        display: inline;
+      }
+
+    }
+
+    h5{
+
+      font-size: 6.5vw;
+      line-height: 180%;
+      text-align: center;
+      border: 0px;
+      padding: 0px;
+      width: 100%;
+      font-weight: bold;
+      color: #007780;
+      text-shadow: 0 0 5px white;
 
       br{
         display: inline;

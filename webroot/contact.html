@@ -18,10 +18,10 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
     <link href="assets/css/common.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/base.css" rel="stylesheet" type="text/css" />
+    
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
     <!--IMPORT JQ JS -->
@@ -66,7 +66,7 @@
 
         <div id="main">
 
-            <div id="FORMBOX" class="inner">
+            <div class="formwrap inner">
 
                 <h3><span>お問い合わせフォーム</span></h3>
 
@@ -170,23 +170,30 @@
 
                 <section>
 
-                    <div id="telfaxbox" class="move">
+                    <div class="telfaxwrap ">
 
-                        <dl class="telfax move">
-                            <dt class="move"><i class="fa fa-phone move" aria-hidden="true"></i></dt>
-                            <dd class="move"><a href="tel:03-5468-9601　" class="move">03-5468-9601　</a><span
-                                    class="move">受付時間：平日　9:00〜18:00</span></dd>
+                        <dl class="telfax ">
+
+                            <dt class="">
+                                <i class="fa fa-phone " aria-hidden="true"></i>
+                            </dt>
+
+                            <dd class="">
+                                    <span data-action="call" data-tel="03-5468-9601">03-5468-9601</span>
+                                 <span class="subspan">受付時間：平日　9:00〜18:00</span></dd>
                         </dl>
 
-                        <dl class="telfax move">
-                            <dt class="move"><i class="fa fa-fax move" aria-hidden="true"></i></dt>
-                            <dd class="move">03-5468-9251<span class="move">２４時間受け付け</span></dd>
+                        <dl class="telfax ">
+                            <dt class=""><i class="fa fa-fax " aria-hidden="true"></i></dt>
+                            <dd class="">03-5468-9251<span class="subspan">２４時間受け付け</span></dd>
                         </dl>
 
                     </div>
 
                 </section>
+
             </section>
+
         </div>
 
 

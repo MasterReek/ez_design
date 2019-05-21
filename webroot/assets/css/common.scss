@@ -86,7 +86,6 @@ $fontc: rgb(33, 33, 33);
   }
 }
 
-
 //inview
 @mixin inview_item() {
 
@@ -107,7 +106,7 @@ $fontc: rgb(33, 33, 33);
 
  
 html{
-  width: 100vw;
+  width: 100%;
   height: auto;
   overflow-x: hidden;
   margin: 0;

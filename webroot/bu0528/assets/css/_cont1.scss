@@ -1,0 +1,61 @@
+
+.cont1{
+
+  width: 100%;
+  height: auto;
+  @include content_padding();
+
+  @include maxw();
+  margin: 0 auto;
+  
+
+  background-image: url(../images/content1_bg.png);
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h3{
+    width: 60%;
+    max-width: 500px;
+
+    @include inview_item();
+  }
+
+  p{
+    font-size: 18px;
+    text-align: center;
+    line-height: 200%;
+    letter-spacing: 1px;
+    display: block;
+    margin: 60px 0;
+    color: $fontc;
+    width: 100%;
+
+    @include inview_item();
+  }
+
+  @include mq(){
+
+    background-size: 100% auto;
+
+    h3{
+      width: 90%;
+    }
+
+    p{
+      margin: 30px 0;
+      font-size: 16px;
+
+      br{
+        display: none;
+      }
+    }
+
+  }
+
+}

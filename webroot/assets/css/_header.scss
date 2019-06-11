@@ -1,88 +1,76 @@
 header{
 
-    width: 100%;
-    // @include minw();
-    height: auto;
-    position: fixed;
+  width: 100%;
+  @include minw();
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 15px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    @media print {
-     position: absolute;
-    }
+  transition: .2s;
 
-    left: 0;
-    top: 0;
-    z-index: 1000;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    transition: .2s;
-  
-    &.scroll{
-  
-      background: rgba(255, 255, 255, 0.8);
-  
-      ul{
-  
-        li, li a{
-          color:rgb(52, 52, 52);
-        }
-      }
-    }
-  
-    h1{
+  &.scroll{
 
-      width: 30vw;
-      min-width: 200px;
-      max-width: 300px;;
-      height: auto; 
-  
-      display: block;
-  
-      img{
-  
-        width: 100%;
-        height: auto;
-        max-height: 80px;
-      }
-    }
-  
+    background: rgba(255, 255, 255, 0.8);
+
     ul{
-  
-      display: flex;
-      // padding-right: 50px;
-      // min-width: 700px;
-      
-      li,li a{
-        margin: 0 10px;
-        color:rgb(52, 52, 52);
-        font-size: 14px;
-  
-        @include mq(gnavbp){
-          font-size: 1.3vw;
-        }
-  
-        font-weight: bold;
-        text-decoration: none;
 
-        &:hover{
-
-          text-decoration: underline;
-
-        }
-
-        &.current{
-
-          text-decoration: underline;
-
-
-        }
-
+      li{
+        color: $coc;
       }
-  
     }
+  }
+
+  h1{
+
+    width: auto;
+    display: block;
+  
+
+    img{
+
+      width: auto;
+      height: 100%;
+      height: 60px;
+    }
+  }
+
+  ul{
+
+    display: flex;
+    padding-right: 50px;
+    min-width: 700px;
+    
+    li{
+      margin: 0 10px;
+      color: white;
+
+      @include roboto();
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+
+      
+      a{
+        font-size: 18px;
+        color: $coc;
+      }
+
+      span{
+        font-size: 10px;
+        margin-top:5px;
+        display: block;
+        width: 100%;
+      }
+    }
+
+  }
   
     @include mq(){
   

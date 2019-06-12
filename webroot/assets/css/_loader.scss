@@ -13,7 +13,11 @@
     overflow: hidden;
     pointer-events: none;
     background: white;
-    transition: .8s;
+
+    transition: all 1000ms cubic-bezier(0.705, -0.015, 0.000, 1.020); 
+    transition-timing-function: cubic-bezier(0.705, -0.015, 0.000, 1.020);
+
+    // transition: .8s;
   
     img{
       width: 10vw;
@@ -31,14 +35,15 @@
     }
 
     &.active{
-      opacity: 0;
+      // opacity: 0;
+      transform: translateX(100vw);
     }
   
 
     @include mq(){
 
       img{
-        width: 30vw;
+        width:20vw;
         margin-top: -75px;
       }
     }

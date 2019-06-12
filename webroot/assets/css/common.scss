@@ -67,7 +67,7 @@ body {
 }
 
 @mixin minw() {
-  min-width: 1100px;
+  min-width: 800px;
   @include mq(){
     min-width: 10px;
   }
@@ -112,6 +112,23 @@ $fontc: rgb(33, 33, 33);
   }
 }
 
+@mixin inview_item2() {
+
+  transition: .6s;
+  transform: translateX(150px);
+  opacity: 0;
+
+  &.move{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  @media print {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
  
 html{
   width: 100%;
@@ -125,7 +142,7 @@ html{
 body{
 
   width: 100%;
-  @include minw();
+  // @include minw();
   height: auto;
   margin: 0;
   padding: 0;
@@ -149,33 +166,61 @@ body{
 
   width: 100%;
   height: auto;
+  position: relative;
+  overflow: hidden;
+
+  .bgtri{
+    width: 200%;
+    height: 200vh;
+    background-color: #efefef;
+    transform: rotate(60deg);
+    position: absolute;
+    left: 0;
+    top: 200vh;
+    z-index: 1;
+  }
 
   @include mq(){
 
     width: 100vw;
     padding-top: 60px;
     
- 
   }
 }
 
 .linkbtn{
 
-  @include inview_item();
+  // @include inview_item();
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   color: white;
 
-  background: linear-gradient(to right, #0575E6, rgb(29, 237, 181));
-  background: #007780;
+  background: $coc;
   padding: 15px 20px;
-  border-radius: 50px;
+  transform: skewX(-10deg);
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   transition: .4s;
+
+  div{
+
+    transform: skew(10deg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   i{
     margin-left: 10px;
@@ -183,19 +228,36 @@ body{
 
   img{
     margin-left: 10px;
-    width: 16px;
+    width: 40px;
     height: auto;
+    display: block;
+    transition: .6s;
     
   }
 
   &:hover{
-
-    opacity: .8;
-    letter-spacing: 1px;
+    animation-name: boyon;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(.2, 2, 0.6, .6);
+    animation-fill-mode: both;
+    img{
+      transform: rotateX(360deg)
+    }
 
   }
 
 }
+
+
+@keyframes boyon {
+  0% {
+      transform:skewX(-10deg) scale(0.9);
+  }
+  100% {
+      transform:skewX(-10deg) scale(1);
+  }
+}
+
 
 .eye{
 

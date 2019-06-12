@@ -1,23 +1,43 @@
 
 footer{
+
   width: 100%;
   height: auto;
   padding: 60px 0px 180px;
-  // display: flex;
-  // justify-content: space-around;
-  // align-items: center;
-  // flex-wrap: wrap;
 
-  background: url(../images/footer_bg.svg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center bottom 59px;
-  position: relative;
+  z-index: 2;
  
   @media print {
     
     background-image: none;
     
+  }
+
+  h4{
+
+    font-weight: bold;
+    font-size: 24px;
+    color: $coc;
+    @include roboto();
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $coc;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    line-height: normal;
+
+    @include mq(lg){
+
+      font-size: 2.2vw;
+    }
+
+  }
+
+  h5{
+    font-size: 24px;
+    font-weight: bold;
+    color: $coc;
   }
 
   .inner{
@@ -34,16 +54,25 @@ footer{
     flex-wrap: wrap;
   }
 
-  .footlogo{
+  .logoblocks{
 
-    width: 170px;
-    img{
-      width: 100%;
+    .footlogo{
+
+      width: 250px;
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+      }
+    }
+
+    p{
+      line-height: 160%;
+      font-size: 14px;
     }
   }
 
   .blocks{
-    width: calc(100% - 210px);
+    width: calc(100% - 270px);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -51,52 +80,6 @@ footer{
     flex-wrap: wrap;
     // padding-left: 10%;
    
-    .b_inner{
-
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      // flex-wrap: wrap;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-      border-bottom: 1px dashed $coc;
- 
-      a{
-        font-size: 16px;
-        line-height: 160%;
-        color: $coc;
-        color: rgb(24, 24, 24);
-        margin-right: 20px;
-        text-decoration: none;
-
-        @include mq(){
-          color: $coc;
-          display: block;
-          margin-right: 0;
-        }
-      }
-
-      p{
-        font-size: 16px;
-        line-height: 160%;
-        color: $coc;
-        color: rgb(24, 24, 24);
-        margin-right: 20px;
-
-        @include mq(){
-          margin-right: 0;
-        }
-      }
-  
-      img{
-        width: auto;
-        height: 80px;
-       
-      }
-
-    }
-
     ul{
 
       display: flex;
@@ -107,13 +90,20 @@ footer{
       li{
 
         margin-right: 10px;
+        border-right: 1px solid $coc;
+        padding-right: 10px;
+
+        &:nth-last-of-type(1){
+          border-right: 0px;
+        }
 
         a{
 
           font-size: 12px;
+          font-weight: bold;
           text-decoration: none;
           color: $coc;
-          color: rgb(46, 46, 46);
+       
 
           &:hover{
             opacity: .8;
@@ -134,6 +124,108 @@ footer{
 
   }
 
+  .b_inner{
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    // border-bottom: 1px dashed $coc;
+
+    .telnum{
+
+      margin-bottom: 10px;
+
+      p,a{
+        height: 45px;
+        background: $coc;
+        color: white;
+        font-weight: bold;
+        padding:5px 10px;
+        font-size: 12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        i{
+          font-size: 26px;;
+        }
+
+        span{
+          font-size: 18px;
+          display: block;
+          margin-left: 10px;
+        }
+
+      }
+
+      p{
+        letter-spacing: 2px;
+        
+        >a{
+          margin: 0;
+          padding:0;
+          height: auto;
+        }
+      }
+
+      a{
+
+        font-size: 16px;
+        transition: .2s;
+        margin-bottom: 0;
+
+        i{
+          margin-right: 10px;
+        }
+
+        &:hover{
+          opacity: .8;
+        }
+      }
+
+    }
+
+    a{
+      font-size: 16px;
+      line-height: 160%;
+      color: $coc;
+      color: rgb(24, 24, 24);
+      margin-right: 20px;
+      text-decoration: none;
+
+      @include mq(){
+        color: $coc;
+        display: block;
+        margin-right: 0;
+      }
+    }
+
+    p{
+      font-size: 16px;
+      line-height: 160%;
+      color: $coc;
+      color: rgb(24, 24, 24);
+      margin-right: 20px;
+
+      @include mq(){
+        margin-right: 0;
+      }
+    }
+
+    img{
+      width: auto;
+      height: 80px;
+     
+    }
+
+  }
+
 
   small{
     width: 100%;
@@ -145,7 +237,7 @@ footer{
     font-size: 12px;
     color: white;
     text-align: center;
-    background: #007780;
+    background: $coc;
     // background:  #0575E6
   // transform: translateY(-2px);
   position: absolute;
@@ -156,14 +248,25 @@ footer{
 
   @include mq(){
 
-    padding: 30px 0 120px;
+    padding: 30px 0 60px;
     background-size: auto 60px;
 
     .inner{
+
       justify-content: center;
+
+      h5{
+        width: 100%;
+        text-align: center;
+      }
     }
    
     .footlogo{
+      margin-bottom: 20px;
+    }
+
+    .logoblocks{
+
       margin-bottom: 20px;
     }
 
@@ -195,7 +298,72 @@ footer{
       ul{
         display: none;
       }
+
     }
+
+    .b_inner{
+
+      .telnum{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p,a{
+          width: 48%;
+        }
+
+        p{
+          margin-bottom: 0;
+        }
+        p>a{
+          width: auto;
+        }
+      }
+
+    }
+
+  }
+
+  @include mq(sm){
+
+    .inner{
+
+      h4{
+        font-size: 4vw;
+      }
+      h5{
+        font-size: 5.5vw;
+        margin-top:2vw;
+      }
+    }
+
+    .b_inner{
+
+      .telnum{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+ 
+
+        p,a{
+          width: 100%;
+        }
+
+        p{
+          margin-bottom: 10px;
+        }
+        p>a{
+          width: auto;
+        }
+      }
+
+    }
+
 
   }
 

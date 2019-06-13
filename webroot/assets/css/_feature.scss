@@ -12,6 +12,8 @@
   background-repeat: no-repeat;
   background-position: center top;
   margin-top:-50px;
+  position: relative;
+  z-index: 5;
 
   h3{
     font-size: 26px;
@@ -24,7 +26,7 @@
 
     span{
       // display: block;
-      border-top: 4px solid  #007780;
+      border-top: 4px solid  #2f43a2;
       padding-top: 10px;
     }
   }
@@ -34,9 +36,21 @@
     width: 100%;
     @include maxw();
     margin: 0 auto 100px;
+    @include inview_item();
 
     &:nth-last-of-type(1){
       margin-bottom: 0;
+    }
+
+    &:nth-last-of-type(2n){
+      
+      img{
+        order: 2;
+      }
+
+      p{
+        order: 1;
+      }
     }
 
     display: flex;
@@ -44,10 +58,11 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
-    img{
+    >img{
       width: 40%;
       height: auto;
-      @include inview_item();
+      transform: skew(-5deg);
+
     }
 
     p{
@@ -59,21 +74,79 @@
       color: rgb(29, 29, 29);
       @include inview_item();
 
-      span{
-        font-weight: bold;
-        color:  #007780;
-        display: block;
-        margin: 15px 0;
-      }
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+
+      // span{
+      //   font-weight: bold;
+      //   color:  #007780;
+      //   display: block;
+      //   margin: 15px 0;
+      // }
     }
+
+
+    .linkbtnunder{
+
+      width: auto;
+      margin-top:30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      text-align: right;
+    
+      background: $coc;
+      padding: 15px 20px;
+      transform: skewX(-10deg);
+    
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: .4s;
+    
+      span{
+    
+        width: 100%;
+        transform: skew(10deg); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+      }
+    
+    
+      img{
+        margin-left: 10px;
+        width: 30px;
+        height: auto;
+        display: block;
+        transition: .6s;
+        
+      }
+    
+      &:hover{
+        animation-name: boyon;
+        animation-duration: .8s;
+        animation-timing-function: cubic-bezier(.2, 2, 0.6, .6);
+        animation-fill-mode: both;
+        img{
+          transform: rotateX(360deg)
+        }
+    
+      }
+    
+      }
+    
 
   }
 
   .pcnon{
     display: none;
   }
-
-
 
   @include mq(sm){
 
@@ -87,20 +160,55 @@
     }
 
     h3{
-      font-size: 5.5vw;
+      font-size: 4vw;
+      margin-bottom: 20px;
     }
 
     .inbox{
 
-      margin-bottom: 40px;
+      margin-bottom: 80px;
+
+      &:nth-last-of-type(2n){
+      
+        img{
+          order: 1;
+        }
+  
+        p{
+          order: 2;
+        }
+      }
 
       img,p{
         width: 100%;
       }
 
-      img{
+      p{
+        justify-content: center;
+      }
+
+      >img{
         margin-bottom: 20px;
       }
+
+      .linkbtnunder{
+
+        padding: 10px;
+        span{
+      
+          width: 100%;
+          transform: skew(10deg); 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      
+        }
+      
+
+
+      
+        }
+      
 
     }
 

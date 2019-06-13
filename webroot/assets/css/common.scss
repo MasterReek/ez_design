@@ -169,6 +169,21 @@ body{
   position: relative;
   overflow: hidden;
 
+  &.under{
+    padding-top: 90px;
+
+    .bgtri{
+      width: 200%;
+      height: 200vh;
+      background-color: #efefef;
+      transform: rotate(60deg);
+      position: absolute;
+      left: 0;
+      top: 100vh;
+      z-index: 1;
+    }
+  }
+
   .bgtri{
     width: 200%;
     height: 200vh;
@@ -247,6 +262,8 @@ body{
   }
 
 }
+
+
 
 
 @keyframes boyon {

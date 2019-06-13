@@ -72,6 +72,24 @@ body {
     min-width: 10px;
   }
 }
+
+@mixin h3s() {
+  
+    
+    font-size: 60px;
+    color: $coc;
+    text-align: center;
+
+    span{
+      font-size: 18px;
+      display: block;
+      margin-top:10px;
+    }
+    @include inview_item();
+  
+
+  
+}
  
 //コーポレートカラー
 $coc: #2f43a2;
@@ -318,7 +336,6 @@ body{
       font-size: 20px;
     }
   }
-
 }
 
 
@@ -381,8 +398,8 @@ body{
 @import "loader"; 
 @import "swiper";
 @import "sp_menu";
-@import "feature";
-@import "service";
+@import "about";
+@import "staff";
+@import "environment";
 @import "company";
 @import "contact";
-   

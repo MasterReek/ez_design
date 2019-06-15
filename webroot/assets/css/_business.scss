@@ -1,0 +1,176 @@
+
+#BUSINESS{
+  background-image: url(../images/eye_bg_business.jpg);
+  height:280px ;
+}
+
+
+.business_top{
+
+  
+  @extend .cont1under;
+  background: #fff;
+  transform: translateY(-40px);
+  background: linear-gradient(-45deg, #f2f2f2 25%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 50%, #f2f2f2 50%, #f2f2f2 75%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.7));
+  background-size: 4px 4px;
+
+  padding: 30px;
+  position: relative;
+  z-index: 5;
+
+  >div{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 50px;
+    background: white;
+  }
+  
+}
+
+h3.buscatch{
+
+  font-size: 36px;;
+}
+
+.itemselector{
+
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li{
+    width: 18%;
+    // padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+    background: $coc;
+    transform: skewX(-10deg);
+
+    a{
+      width: 100%;
+      height: auto;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      transform: skewX(10deg);
+
+      i{
+        margin-left: 10px;
+        transform: rotate(-90deg);
+        transition: .2s;
+      }
+
+      &:hover i{
+
+        transform: rotate(0deg);
+      }
+    }
+
+  }
+
+  @include mq(){
+
+    justify-content: space-evenly;
+    li{
+      width: 30%;
+      margin-bottom: 5%;
+    }
+    
+  }
+}
+
+.bus_items{
+
+
+  @include content_padding();
+  margin: 60px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background: rgb(240, 240, 240);
+
+  &:nth-of-type(2n){
+    background: white;
+  }
+
+  .inner{
+    @include maxw();
+
+
+  }
+
+  p{
+    padding: 20px 0;
+    margin: 50px 0;
+    line-height: normal;
+  }
+
+
+
+
+
+}
+
+.item_eye{
+
+  position: relative;
+
+  img{
+    width: 100%;
+    transform: skewX(-10deg);
+  }
+
+  h4{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 5px;
+  }
+
+
+
+}
+
+.pics{
+  
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img{
+    width: 48%;
+  }
+
+}

@@ -49,6 +49,7 @@ $(document).ready( function() {
 
     telkiller();
     isPhone();
+    scroller();
     
 });
 
@@ -148,4 +149,26 @@ function isPhone()
 	}
 	// 最後はiPhoneかどうかを判定し、結果を返す
 	return(navigator.userAgent.indexOf('iPhone') >= 0);
+}
+
+
+function scroller(){
+
+    $('a[href^="#"]').click(function() {
+
+        // スクロールの速度
+        var speed = 1000; // ミリ秒
+        // アンカーの値取得
+        var href= $(this).attr("href");
+        // 移動先を取得
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // 移動先を数値で取得
+        var position = (target.offset().top);
+        position = position - 130;
+        // スムーススクロール
+        $('body,html').animate({scrollTop:position}, speed, 'easeInOutQuint');
+
+
+        return false;
+    });
 }

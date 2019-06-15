@@ -87,14 +87,22 @@ header {
 
         background: white;
 
+        padding: 0 15px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+
         &.scroll {
             background: white;
         }
 
         h1 {
             width: auto;
-            height: 60px;
+            height: 50px;
             z-index: 35000;
+            // margin-top:5px;
 
             img {
                 width: auto;

@@ -131,7 +131,7 @@
     
     </section>
 
-    <section class="bus_items" id="tsuchi">
+    <section class="bus_items" id="dasetsu">
     
         <div class="inner">
     
@@ -151,6 +151,63 @@
         </div>
     
     </section>
+    <section class="bus_items" id="atsusou">
+    
+        <div class="inner">
+    
+            <div class="item_eye">
+                <h4>コンクリート圧送工事</h4>
+                <img src="assets/images/business_assou.jpg" alt="">
+            </div>
+    
+            <p>文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります文章が入ります
+            </p>
+    
+            <div class="pics">
+                <img src="assets/images/bus_assou2.jpg" alt="">
+                <img src="assets/images/bus_assou3.jpg" alt="">
+            </div>
+    
+        </div>
+    
+    </section>
+
+
+    <div id="sekou">
+
+        <div class="bgtri"></div>
+        <h3>施工実績<span>Works</span></h3>
+
+          <!-- Swiper -->
+  <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> <img src="assets/images/sekou/1.JPG" alt=""></div>
+          <div class="swiper-slide"> <img src="assets/images/sekou/2.JPG" alt=""></div>
+
+          <div class="swiper-slide"> <img src="assets/images/sekou/4.JPG" alt=""></div>
+          <div class="swiper-slide"> <img src="assets/images/sekou/5.JPG" alt=""></div>
+          <div class="swiper-slide"> <img src="assets/images/sekou/6.JPG" alt=""></div>
+
+   
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+
+      <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide"　data-txt="施工1"> <img src="assets/images/sekou/1.JPG" alt="施工名"><span>施工名</span></div>
+                <div class="swiper-slide"　data-txt="施工2"> <img src="assets/images/sekou/2.JPG" alt="施工名"></div>
+                <div class="swiper-slide"　data-txt="施工3"> <img src="assets/images/sekou/4.JPG" alt="施工名"></div>
+                <div class="swiper-slide"　data-txt="施工4"> <img src="assets/images/sekou/5.JPG" alt="施工名"></div>
+                <div class="swiper-slide"　data-txt="施工5"> <img src="assets/images/sekou/6.JPG" alt="施工名"></div>
+
+        </div>
+      </div>
+    
+
+    </div>
 
 
     <footer>
@@ -210,6 +267,24 @@ $(document).ready( function() {
 
             }
         });
+
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 8,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
     });
 
     </script>

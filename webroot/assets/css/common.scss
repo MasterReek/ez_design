@@ -190,6 +190,10 @@ body{
   &.under{
     padding-top: 90px;
 
+    @include mq(){
+      padding-top: 60px;
+    }
+
     .bgtri{
       width: 200%;
       height: 200vh;
@@ -281,9 +285,6 @@ body{
 
 }
 
-
-
-
 @keyframes boyon {
   0% {
       transform:skewX(-10deg) scale(0.9);
@@ -292,7 +293,6 @@ body{
       transform:skewX(-10deg) scale(1);
   }
 }
-
 
 .eye{
 
@@ -339,7 +339,6 @@ body{
     }
   }
 }
-
 
 #pagetop{
 
@@ -406,3 +405,4 @@ body{
 @import "business";
 @import "company";
 @import "contact";
+@import "recruit";

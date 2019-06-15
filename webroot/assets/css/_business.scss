@@ -25,12 +25,28 @@
     padding: 50px;
     background: white;
   }
+
+  @include mq(){
+    >div{
+      padding:30px 15px;
+    }
+  }
   
 }
 
 h3.buscatch{
 
-  font-size: 36px;;
+  font-size: 36px;
+
+  @include mq(){
+
+    font-size: 30px;
+    line-height: normal;
+
+    span{
+      font-size: 16px;
+    }
+  }
 }
 
 .itemselector{
@@ -89,6 +105,14 @@ h3.buscatch{
       margin-bottom: 5%;
     }
     
+  }
+
+  @include mq(sm){
+
+      li{
+        width: 100%;
+        margin-bottom: 5px;
+      }
   }
 }
 
@@ -153,6 +177,8 @@ h3.buscatch{
     font-size: 30px;
     color: white;
     letter-spacing: 5px;
+
+    text-shadow: 0 0 5px black;
   }
 
 
@@ -172,5 +198,121 @@ h3.buscatch{
   img{
     width: 48%;
   }
+
+}
+
+
+
+
+#sekou{
+
+  width: 100%;
+  height: auto;
+  padding: 30px;
+
+  font-size: 36px;
+  color: $coc;
+  text-align: center;
+position: relative;
+overflow: hidden;
+
+.bgtri{
+  width: 200%;
+  height: 200vh;
+  background-color: #eaeaea;
+  transform: rotate(60deg);
+  position: absolute;
+  left: 0;
+  top: 30vh;
+  z-index: 1;
+}
+  span{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .gallery-thumbs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding:15px;
+    background: linear-gradient(-45deg, #f2f2f2 25%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 50%, #f2f2f2 50%, #f2f2f2 75%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.7));
+    background-size: 4px 4px;
+    
+    .swiper-wrapper{
+  
+  
+      .swiper-slide{
+  
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        span{
+          position: absolute;
+          z-index: 500;
+          left:0;
+          right:0;
+  
+          margin: auto;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          font-weight: bold;
+          font-size: 12px;
+        }
+       
+        img{
+          opacity: .7;
+        }
+        
+      }
+
+      .swiper-slide-thumb-active{
+
+        img{
+          opacity: 1;
+        }
+  
+      }
+    
+    }
+
+  }
+
+  .swiper-slide{
+    width: 100%;
+    height: auto;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include mq(){
+
+    font-size: 30px;
+    line-height: normal;
+
+    span{
+      font-size: 16px;
+    }
+
+    .swiper-container{
+      height: auto;;
+    }
+
+    .gallery-thumbs{
+      display: none;
+    }
+  }
+
 
 }

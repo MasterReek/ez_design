@@ -104,15 +104,30 @@
     li{
       width: 25%;
       position: relative;
+      background-color: black;
 
       img{
         width: 100%;
         height: auto;
+        transition: .2s;
+      }
+
+      &:hover{
+
+        img{
+          opacity: .8;
+        }
+
+        &:nth-of-type(1) span{right: 10px;bottom: 20px}
+        &:nth-of-type(2) span{left: 10px; top: 20px}
+        &:nth-of-type(3) span{right: 10px; bottom: 20px}
+        &:nth-of-type(4) span{left: 10px; top: 20px}
       }
 
       span{
         font-weight: bold;
         font-size: 2vw;
+        transition: .2s;
 
         @include mq(xl){
           font-size: 22px;

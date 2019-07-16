@@ -6,12 +6,29 @@
 .staffs{
 
     @include maxw();
-    @include content_padding();
+    // @include content_padding();
+    padding: 40px 0;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
+
+    span.tit{
+
+        width: 100%;
+        display: block;
+        font-size: 24px;
+        color: $coc;
+        font-style: italic;
+        position: relative;
+        z-index: 15000;
+        text-align:center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+
+    }
 
 }
 
@@ -25,6 +42,9 @@
     flex-wrap: wrap;
     position: relative;
     z-index: 5;
+
+    padding: 30px;
+    background: #f7f7f7;
 
     .imgbox{
 
@@ -46,6 +66,7 @@
         background-size: 4px 4px;
 
         h3,h4{
+
             font-size: 14px;
             margin-bottom: 20px;
             font-style: italic;
@@ -55,8 +76,10 @@
                 font-size: 24px;
                 color: $coc;
                 margin-top:10px;
+                
                 border-bottom: 1px solid $coc;
                 padding-bottom: 10px;
+                margin-bottom: 10px;
             }
         }
 
@@ -79,12 +102,14 @@
 .member{
 
     @extend .ceo;
-    width: 48%;
+    width: 49%;
     padding: 20px;
     background: white;
+    margin-bottom: 2%;
+    box-sizing: border-box;
 
     &:nth-of-type(2n){
-        margin-right: 4%;
+        // margin-right: 2%;
     }
 
     @include mq(){

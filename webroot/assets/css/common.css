@@ -105,14 +105,14 @@ header ul.gmenu > li:hover ul li:hover a { color: white; }
 .cont1 p.move, .cont1under p.move, .business_top p.move { -webkit-transform: translateY(0px); transform: translateY(0px); opacity: 1; }
 @media print { .cont1 p, .cont1under p, .business_top p { -webkit-transform: translateY(0px); transform: translateY(0px); opacity: 1; } }
 .cont1 ul, .cont1under ul, .business_top ul { width: 100%; height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-bottom: 50px; }
-.cont1 ul li, .cont1under ul li, .business_top ul li { width: 25%; position: relative; background-color: black; }
+.cont1 ul li, .cont1under ul li, .business_top ul li { width: 25%; position: relative; background-color: black; line-height: 0; }
 .cont1 ul li img, .cont1under ul li img, .business_top ul li img { width: 100%; height: auto; -webkit-transition: .2s; transition: .2s; }
 .cont1 ul li:hover img, .cont1under ul li:hover img, .business_top ul li:hover img { opacity: .8; }
 .cont1 ul li:hover:nth-of-type(1) span, .cont1under ul li:hover:nth-of-type(1) span, .business_top ul li:hover:nth-of-type(1) span { right: 10px; bottom: 20px; }
 .cont1 ul li:hover:nth-of-type(2) span, .cont1under ul li:hover:nth-of-type(2) span, .business_top ul li:hover:nth-of-type(2) span { left: 10px; top: 20px; }
 .cont1 ul li:hover:nth-of-type(3) span, .cont1under ul li:hover:nth-of-type(3) span, .business_top ul li:hover:nth-of-type(3) span { right: 10px; bottom: 20px; }
 .cont1 ul li:hover:nth-of-type(4) span, .cont1under ul li:hover:nth-of-type(4) span, .business_top ul li:hover:nth-of-type(4) span { left: 10px; top: 20px; }
-.cont1 ul li span, .cont1under ul li span, .business_top ul li span { font-weight: bold; font-size: 2vw; -webkit-transition: .2s; transition: .2s; color: white; background-color: #2f43a2; position: absolute; padding: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-transform: skewX(-10deg); transform: skewX(-10deg); }
+.cont1 ul li span, .cont1under ul li span, .business_top ul li span { font-weight: bold; font-size: 2vw; -webkit-transition: .2s; transition: .2s; line-height: normal; color: white; background-color: #2f43a2; position: absolute; padding: 5px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-transform: skewX(-10deg); transform: skewX(-10deg); }
 @media screen and (min-width: 1139px) { .cont1 ul li span, .cont1under ul li span, .business_top ul li span { font-size: 22px; } }
 .cont1 ul li:nth-of-type(1) span, .cont1under ul li:nth-of-type(1) span, .business_top ul li:nth-of-type(1) span { right: 0; bottom: 20px; }
 .cont1 ul li:nth-of-type(2) span, .cont1under ul li:nth-of-type(2) span, .business_top ul li:nth-of-type(2) span { left: 0; top: 20px; }

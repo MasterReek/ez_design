@@ -105,6 +105,8 @@
       width: 25%;
       position: relative;
       background-color: black;
+      line-height: 0;
+
 
       img{
         width: 100%;
@@ -128,6 +130,7 @@
         font-weight: bold;
         font-size: 2vw;
         transition: .2s;
+        line-height: normal;
 
         @include mq(xl){
           font-size: 22px;

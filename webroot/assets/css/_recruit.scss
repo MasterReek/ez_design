@@ -104,7 +104,7 @@
         flex-wrap: wrap;
         width: 100%;
         max-width: 800px;
-        margin: 60px auto 120px;
+        margin: 60px auto 60px;
         @include inview_item();
     
         dt,dd{
@@ -176,6 +176,28 @@
         
       }
 
+
+      ul.centerimg{
+
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 60px;
+        padding: 0 15px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li{
+            width: 32%;
+
+            img{
+                width: 100%;
+            }
+        }
+      }
+
       @include mq(sm){
 
         padding: 30px 10px;
@@ -196,6 +218,14 @@
             dt{
                 font-size: 16px;
                 font-weight: bold;
+            }
+        }
+
+        ul.centerimg{
+
+            li{
+
+                width: 100%;
             }
         }
       }

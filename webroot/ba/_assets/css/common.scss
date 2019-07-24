@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+$breakpoints: (
+  'sm': 'screen and (max-width: 414px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1024px)',
+  'xl': 'screen and (min-width: 1139px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap');
+
+@mixin noto() {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@mixin maxw() {
+  max-width: 1200px;
+}
+
+@mixin minw() {
+  min-width: 1100px;
+}
+
+@mixin roboto(){
+
+  font-family: 'Roboto', sans-serif;
+}
+
+$coc: #2f43a2;
+ 
+
+body{
+
+  width: 100%;
+  min-width: 1100px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  @include noto();
+
+}
+
+.swiper-container{
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+}
+
+header{
+
+  width: 100%;
+  @include minw();
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: .2s;
+
+  &.scroll{
+
+    background: rgba(255, 255, 255, 0.8);
+
+    ul{
+
+      li{
+        color: $coc;
+      }
+    }
+  }
+
+  h1{
+
+    width: auto;
+    display: block;
+  
+
+    img{
+
+      width: auto;
+      height: 100%;
+      height: 60px;
+    }
+  }
+
+  ul{
+
+    display: flex;
+    padding-right: 50px;
+    min-width: 700px;
+    
+    li{
+      margin: 0 10px;
+      color: white;
+
+      @include roboto();
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+
+      
+      a{
+        font-size: 18px;
+        color: $coc;
+      }
+
+      span{
+        font-size: 10px;
+        margin-top:5px;
+        display: block;
+        width: 100%;
+      }
+    }
+
+  }
+
+}
+
+
+.bodyimg{
+
+  width: 100%;
+  // max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  // background: url(../images/main_bg.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: left bottom;
+  text-align: center;
+  line-height: 0;
+
+  img{
+
+    width: 100%;
+    // max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -112,41 +112,68 @@
 
 
 
-.printcont{
-  display: none;
-}
+//印刷設定
+.printcont{display: none;}
 
 @media print {
+
 
   .printcont{
     width: 100%;
     height: auto;
     display: block;
 
-    h2{
+  
+    .read{
 
-      @include inview_item();
+     
+
+      font-style: italic;
       font-size: 3vw;
       font-weight: bold;
       letter-spacing: 2px;
       color: white;
-      text-shadow: 2px 2px 5px black;
+      
+      display: block;
+
       position: absolute;
-      text-align: center;
-      left: 0;
+      z-index: 5;
+      text-align: right;
+
+      width: auto;
       right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      top:35%;
-  
+      bottom: 15vh;
+      
+
+      h2{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $coc;
+        text-align: right;
+        transform: translateX(15px);
+
+        padding: 0 15px 0 10px;
+        
+      }
+
       span{
         font-size: 1.5vw;
-        font-weight: normal;
-        display: block;
-        margin-top: 1.5vw;
+        font-weight: bold;
+        line-height: 3vw;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 0 10px;
+        background-color: $coc;
+
       }
+
+   
   
     }
+  
+
+
   
     img{
       width: 100%;

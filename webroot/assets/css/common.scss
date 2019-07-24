@@ -36,11 +36,12 @@ a[href^="tel:"] {
 html,
 body {
     @media print {
+
         max-width: 210mm;
         top: 0 !IMPORTANT;
         left: 0 !IMPORTANT;
         width: 200mm !IMPORTANT;
-
+        overflow-x: hidden;
         @page {
             size: A4;
             margin: 0;
@@ -203,6 +204,12 @@ body{
       left: 0;
       top: 130vh;
       z-index: 1;
+
+      @media print {
+        .bgtri{
+          display: none;
+        }
+      }
     }
   }
 
@@ -222,6 +229,12 @@ body{
     width: 100vw;
     padding-top: 60px;
     
+  }
+
+  @media print {
+    .bgtri{
+      display: none;
+    }
   }
 }
 

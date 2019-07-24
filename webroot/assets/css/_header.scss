@@ -266,4 +266,8 @@ header {
 
     }
 
+    @media print {
+        display: none;
+    }
+
 }

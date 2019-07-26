@@ -48,10 +48,11 @@
     }
 
     .leftimg{
-      width: 40%;
+      width: 35%;
       transform:translateY(30px) skewX(-10deg);
       transition: .6s;
       opacity: 0;
+      margin-left: 5%;
 
       &.move{
         opacity: 1;

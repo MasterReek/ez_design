@@ -511,6 +511,10 @@
 
             br {
                 display: none;
+
+                &.nonone{
+                    display: inline;
+                }
             }
         }
 

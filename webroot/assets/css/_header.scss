@@ -267,7 +267,7 @@ header {
     }
 
     @media print {
-        display: none;
+        position: relative;
     }
 
 }

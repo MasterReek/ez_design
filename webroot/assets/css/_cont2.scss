@@ -1,158 +1,106 @@
 
 .cont2{
 
+
   width: 100%;
   height: auto;
-  padding: 0;
+  @include content_padding();
+
+  @include noto();
 
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color:#ffffff2c;
+  background-color:#EDECE8;
   position: relative;
 
 
-  .page_link{
+  .hstyle{
 
-    @include inview_item();
-    width: calc(50% - 3px);
-    margin-bottom: 0px;
-
-    height: auto;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
-
-    &:before{
-      content:'';
-      width: 150%;
-      height: 100%;
-      display: block;
-      background: rgba(0, 0, 0, 0.42);
-      position: absolute;
-      left: 0;
-      top:0;
-      
-      transition: .5s;
-      transform: translateX(-100%);
-    }
-
-    &:hover:before{
-
-      transform: translateX(0%) ;
-
-    }
-
-    img{
-      width: 100%;
-      height: auto;
-
-      &.logo{
-
-        width: 50px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-right: auto;
-        margin-left: auto;
-        bottom: 20px;
-
-        @include mq(){
-          display: none;
-        }
-      }
-
-    }
-
-    h4 {
-
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto auto;
-        display: block;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        align-content: center;
-        flex-wrap: wrap;
-        font-size: 3vw;
-        letter-spacing: 0px;
-        text-align: center;
-        transition: .4s;
-
-        @include roboto();
-        font-style: italic;
-        
-
-        &:hover {
-            // letter-spacing: 7px;
-        }
-
-        @include mq(xl) {
-            font-size: 50px;
-        }
- 
-        span{
-          // border-bottom: 2px solid white;
-          padding-bottom: 10px;
-        }
-
-        &:after{
-          content:attr(data-caps);
-          font-size:18px ;
-          font-weight: 100;
-          display: block;
-          width: 100%;
-          // opacity: .5;
-          
-          letter-spacing: 1px;
-          
-        }
-
-    }
-
-    >span{
-
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin-right: auto;
-      margin-left: auto;
-      bottom: 50px;
-      text-align: center;
-
-      @include mq(){
-        display: none;
-      }
-    }
-
-  }
-
-  &:after{
-
-    content: '';
-    display: block;
-    position: absolute;
+    color: $sub;
+    font-size: 28px;
+    letter-spacing: 3px;
     width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    // background-image: url(../images/cont2_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    opacity: .6;
-    z-index: 1;
-
+    text-align: center;
+    display: block;
+    margin-bottom: 50px;
+    
   }
+
+  ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+
+    li{
+
+      width: 30%;
+
+      margin-left: 1.6%;
+      margin-right: 1.6%;
+      margin-bottom: 3%;
+      position: relative;
+
+      &:nth-of-type(4){
+        margin-left: 16.6%;
+      }
+
+      a{
+
+        text-decoration: none;
+
+        i{
+          margin-right: 10px;
+        }
+
+        &:hover{
+
+          span{
+
+            background: rgba(255, 255, 255, 0.88);
+            color: $coc;
+            padding: 15% 0;
+          }
+
+          img{
+
+            filter: blur(1px);
+
+          }
+
+        }
+       
+        span{
+
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 0;
+          text-align:center;
+          background: rgba(0, 144, 154, 0.762);
+          color: white;
+          transition: .4s;
+
+        }
+        
+      }
+
+      img{
+        width: 100%;
+        background: white;
+      }
+    }
+  }
+
+
 
 
   @include mq(){
@@ -168,5 +116,6 @@
 
   }
 
+  
 
 }

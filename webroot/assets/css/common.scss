@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 $breakpoints: (
-  'sm': 'screen and (max-width: 414px)',
-  'md': 'screen and (max-width: 768px)',
-  'lg': 'screen and (max-width: 1024px)',
-  'xl': 'screen and (min-width: 1139px)',
+  'sm': 'only screen and (max-width: 414px)',
+  'md': 'only screen and (max-width: 768px)',
+  'lg': 'print, screen and (max-width: 1024px)',
+  'xl': 'print, screen and (min-width: 1139px)',
   'gnavbp': 'screen and (max-width: 980px) and (min-width: 769px) ',
 
 ) !default;
@@ -21,6 +21,7 @@ html *{
 
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap');
 
 
 a[href^="tel:"] {
@@ -31,6 +32,7 @@ a[href^="tel:"] {
   }
   
 }
+
 
 
 html,
@@ -54,7 +56,7 @@ body {
 
 @mixin noto() {
   font-family: 'Noto Sans JP', sans-serif;
-  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  // font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 
 }
 
@@ -62,9 +64,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+@mixin maru(){
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
 @mixin maxw() {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
 
 }
 
@@ -93,8 +99,12 @@ body {
   
 }
 
+
+
 //コーポレートカラー
-$coc: #2f43a2;
+$coc: #E56103;
+$sub:#00919A;
+ 
 
 //フォントカラー
 $fontc: rgb(33, 33, 33);
@@ -178,65 +188,25 @@ body{
   }
 }
 
+$header_h:80px;
 
 @import "header";
 
 
-.contentWrapper{
+.contwrap{
 
   width: 100%;
   height: auto;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
 
-  &.under{
-    padding-top: 90px;
+}
 
-    @include mq(){
-      padding-top: 60px;
-    }
-
-    .bgtri{
-      width: 200%;
-      height: 200vh;
-      background-color: #eaeaea;
-      transform: rotate(60deg);
-      position: absolute;
-      left: 0;
-      top: 130vh;
-      z-index: 1;
-
-      @media print {
-        .bgtri{
-          display: none;
-        }
-      }
-    }
-  }
-
-  .bgtri{
-    width: 200%;
-    height: 200vh;
-    background-color: #eaeaea;
-    transform: rotate(60deg);
-    position: absolute;
-    left: 0;
-    top: 200vh;
-    z-index: 1;
-  }
-
-  @include mq(){
-
-    width: 100vw;
-    padding-top: 60px;
-    
-  }
-
-  @media print {
-    .bgtri{
-      display: none;
-    }
-  }
+.hstyle{
+  font-size: 24px;
+  // color:$coc;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .linkbtn{
@@ -248,52 +218,36 @@ body{
   color: white;
 
   background: $coc;
-  padding: 15px 20px;
-  transform: skewX(-10deg);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   transition: .4s;
+  float: right;
 
-  div{
 
-    transform: skew(10deg); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  i{
-    margin-left: 10px;
-  }
-
-  img{
-    margin-left: 10px;
-    width: 40px;
-    height: auto;
+  &:after{
+    content:'';
     display: block;
-    transition: .6s;
-    
+    background-image: url(../images/SVG/arrow_r.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18px;
+    height: 18px;
   }
+
+
 
   &:hover{
     animation-name: boyon;
     animation-duration: .8s;
     animation-timing-function: cubic-bezier(.2, 2, 0.6, .6);
     animation-fill-mode: both;
-    img{
-      transform: rotateX(360deg)
-    }
+
 
   }
 
@@ -301,10 +255,10 @@ body{
 
 @keyframes boyon {
   0% {
-      transform:skewX(-10deg) scale(0.9);
+      transform: scale(0.9);
   }
   100% {
-      transform:skewX(-10deg) scale(1);
+      transform: scale(1);
   }
 }
 
@@ -403,6 +357,10 @@ body{
     display: none;
   }
 
+  @media print {
+    display: none;
+  }
+
 }
   
 @import "cont1";
@@ -416,7 +374,7 @@ body{
 @import "about";
 @import "staff";
 @import "environment";
-@import "business";
+
 @import "company";
 @import "contact";
 @import "recruit";

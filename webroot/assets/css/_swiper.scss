@@ -1,7 +1,9 @@
 .swiper-container{
+
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 160px);
+
 
   @include minw();
 
@@ -16,19 +18,54 @@
     position: absolute;
 
     z-index: 10000;
-    left:15vw ;
-    top:20%;
+    left:10vw ;
+    top:50%;
 
+  }
+
+  @include mq(){
+
+    overflow: hidden;
+
+    max-height: calc(100vh - 30vh);
+
+    .banner{
+
+      width: 70vw;
+      left: 5vw;
+      top: 10%;
+    }
   }
 
 
 }
 
-.swiper-slide img{
-  width: 100%;
-  height: calc(100vh - 80px);
-  object-fit: cover;
-  object-position: 100% 100%;
+.swiper-slide{
+
+  img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+    object-position: 100% 100%;
+
+    @include mq(){
+      height: 70vh;
+    }
+
+  }
+
+  &.lasttype{
+
+    img{
+
+      @include mq(sm){
+        object-position: 35% 100%;
+      }
+
+    }
+
+  }
+
 }
 
 .swiper-slide-active{

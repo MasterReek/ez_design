@@ -1,0 +1,109 @@
+
+.access{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1002;
+
+    .info{
+
+        width: 22vw;
+        max-width: 350px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position:absolute;
+        right: 20px;
+        top:5%;
+        z-index: 500;
+        background: white;
+        padding: 30px;
+        box-shadow: 0 0 5px rgb(201, 201, 201);
+
+        img{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        p{
+            text-align:center;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 16px;
+
+            strong{
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .linkbtn{
+        background: $sub;
+    }
+
+    @include mq(){
+
+        .info{
+
+            position: static;
+            width: 100%;
+            max-width: 100%;
+            display: block;
+            text-align:center;
+            padding: 30px 15px;
+
+            .linkbtn{
+
+                display: none;
+            }
+
+            img{
+
+                width: 40vw;
+            }
+        }
+
+    }
+
+    @include mq(sm){
+
+
+        .info{
+            display: none;
+        }
+    }
+
+
+    @media print {
+        
+        .info{
+           display:none;
+        }
+    }
+
+}
+
+.google-map {
+    position: relative;
+    width: 100%;    /* 左右に余白が必要なら値を変更してもOK */
+    height: 0;
+    padding-bottom: 30%;    /* padding-topでもOK */
+    overflow: hidden;
+
+    @include mq(){
+
+        padding-bottom: 70%;
+
+    }
+}
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    /* 必要であれば!importantを付けてください */
+    height: 100%;    /* 必要であれば!importantを付けてください */
+}

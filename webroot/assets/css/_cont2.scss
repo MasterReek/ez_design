@@ -19,13 +19,13 @@
   .hstyle{
 
     color: $sub;
-    font-size: 28px;
+    font-size: 34px;
     letter-spacing: 3px;
     width: 100%;
     text-align: center;
     display: block;
     margin-bottom: 50px;
-    
+    @include inview_item();
   }
 
   ul{
@@ -35,13 +35,14 @@
     max-width: 1000px;
 
     li{
-
+      @include inview_item();
       width: 30%;
 
       margin-left: 1.6%;
       margin-right: 1.6%;
       margin-bottom: 3%;
       position: relative;
+      overflow: hidden;
 
       &:nth-of-type(4){
         margin-left: 16.6%;
@@ -50,6 +51,8 @@
       a{
 
         text-decoration: none;
+        line-height: 0;
+        display: block;
 
         i{
           margin-right: 10px;
@@ -95,7 +98,8 @@
 
       img{
         width: 100%;
-        background: white;
+ 
+        line-height: 0;
       }
     }
   }
@@ -105,12 +109,30 @@
 
   @include mq(){
 
-    .page_link{
-      width:100%;
-      margin: 0px 0;
+    ul{
 
-      h4{
-        font-size: 10vw;
+      li{
+
+        width: 45%;
+
+        &:nth-of-type(4){
+          margin-left: 1.6%;
+        }
+
+      }
+    }
+    
+  }
+
+  @include mq(sm){
+
+    ul{
+
+      li{
+        width: 100%;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     }
 

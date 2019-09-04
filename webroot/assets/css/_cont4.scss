@@ -1,0 +1,101 @@
+
+.cont4{
+
+    @include content_padding();
+    background-color:#EDECE8;
+    width: 100%;
+    height: auto;
+
+    .inner{
+
+        @include inview_item();
+        width: 100%;
+        max-width: 1000px;
+        min-height: 400px;
+        border-radius: 30px;
+        margin: 0 auto;
+        height: auto;
+        background-image: url(../images/rec_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 100%;
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 50px;
+        position: relative;
+        box-shadow: 0 0 5px rgb(216, 216, 216);
+
+        &:after{
+            content:'RECRUIT';
+            font-size: 7vw;
+            color: $sub;
+            font-weight: 100;
+            letter-spacing: 10px;
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+            opacity: .8;
+        }
+
+        .txtbox{
+
+            .hstyle{
+                color: $sub;
+                font-size: 36px;
+            }
+
+            p{
+
+                line-height: 180%;
+                font-size: 18px;
+                color: rgb(70, 70, 70);
+                padding-left: 15px;
+            }
+
+            .linkbtn{
+
+                background-color: $sub;
+                float: none;
+                margin-left: 15px;
+                width: 60%;
+            }
+
+
+        }
+    }
+
+
+
+    @include mq(sm){
+
+
+        padding: 0;
+        .inner{
+
+            max-width: 100%;
+            min-height: 0;
+            padding:25px;
+            background-position: right -30vw center;
+            border-radius: 0;
+
+            &:after{
+
+                display: none;
+            }
+
+            .txtbox{
+
+                .hstyle{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+
+        
+    }
+}

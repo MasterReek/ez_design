@@ -57,4 +57,29 @@
       width: 100%;
     }
   }
+
+
+  @include mq(sm){
+
+    .txtbox,.imgbox{
+      width: 100%;
+    }
+
+    .txtbox{
+
+      padding: 15px;
+      
+      .hstyle{
+        font-size: 20px;
+      }
+
+      .linkbtn{
+
+        width: 100%;
+      }
+    }
+
+  }
+
+
 }

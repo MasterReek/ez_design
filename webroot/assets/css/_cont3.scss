@@ -18,14 +18,41 @@
   .txtbox{
 
     margin-left: 10vw;
+    max-width: 600px;
+    width: 60%;
   }
 
   h3,p{
     @include inview_item();
   }
 
+  p{
+    margin-left: 15px;
+  }
+
   .hstyle{
-    font-size: 28px;
+    font-size: 32px;
+  }
+
+
+  @include mq(){
+
+    .txtbox{
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      background-color: rgba(255, 255, 255, 0.858);
+    }
+
+  }
+
+
+  @include mq(sm){
+
+    padding: 15px 0;
+    margin: 15px 0;
+    min-height: 300px;
+
   }
 
 }

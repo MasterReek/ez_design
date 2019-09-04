@@ -5,7 +5,10 @@ footer{
   height: auto;
   padding: 60px 0px 180px;
 
-  z-index: 2;
+  position: relative;
+  background-color: white;
+
+  z-index: 1002;
  
   @media print {
     
@@ -13,32 +16,6 @@ footer{
     
   }
 
-  h4{
-
-    font-weight: bold;
-    font-size: 24px;
-    color: $coc;
-    @include roboto();
-    display: block;
-    width: 100%;
-    text-align: center;
-    border-bottom: 2px solid $coc;
-    padding-bottom: 10px;
-    margin-bottom: 50px;
-    line-height: normal;
-
-    @include mq(lg){
-
-      font-size: 2.2vw;
-    }
-
-  }
-
-  h5{
-    font-size: 24px;
-    font-weight: bold;
-    color: $coc;
-  }
 
   .inner{
     width: 100%;
@@ -47,20 +24,85 @@ footer{
     height: auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: flex-end;
     align-content: flex-end;
     flex-wrap: wrap;
+
+    dl{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+
+      dt{
+
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btns{
+
+          width: 100%;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgb(186, 186, 186);
+          transition: .2s;
+
+          &.free{
+            font-size: 24px;
+          }
+
+          &:not(.free):hover{
+
+            transform: translateY(-5px);
+          }
+
+        }
+
+        span{
+
+          font-size: 20px;
+          font-weight: bold;
+          color: $sub;
+
+          img{
+            height: 30px;
+          }
+
+          i{
+            margin-right: 10px;
+          }
+   
+        }
+      }
+    }
+
+  }
+
+  .message{
+  
+    width: 100%;
+    margin: 30px 0;
   }
 
   .logoblocks{
 
+    width: 100%;
+    text-align:center;
+
     .footlogo{
 
-      width: 250px;
+      width:20vw;
+     
       margin-bottom: 10px;
-      height: 60px;
+ 
 
       img{
         width: 100%;
@@ -238,11 +280,9 @@ footer{
     align-items: center;
     flex-wrap: wrap;
     font-size: 12px;
-    color: white;
+    color: $coc;
     text-align: center;
-    background: $coc;
-    // background:  #0575E6
-  // transform: translateY(-2px);
+
   position: absolute;
   left: 0;
   bottom: 0;
@@ -254,23 +294,42 @@ footer{
     padding: 30px 0 60px;
     background-size: auto 60px;
 
+ 
+
     .inner{
 
       justify-content: center;
 
-      h5{
-        width: 100%;
-        text-align: center;
+      dl{
+
+        flex-wrap: wrap;
+
+        dt{
+  
+          width: 100%;
+          margin-bottom: 15px;
+          
+          .btns{
+
+            padding: 20px 0;
+          }
+
+        }
       }
     }
    
-    .footlogo{
-      margin-bottom: 20px;
-    }
 
     .logoblocks{
 
       margin-bottom: 20px;
+
+      .footlogo{
+
+        width: 60vw;
+        margin-bottom: 0px;
+
+      }
+  
     }
 
     .blocks{
@@ -333,12 +392,16 @@ footer{
 
     .inner{
 
-      h4{
-        font-size: 4vw;
-      }
-      h5{
-        font-size: 5.5vw;
-        margin-top:2vw;
+   
+      dl{
+
+        dt{
+
+          a{
+            width: 100%;
+            text-decoration: none;
+          }
+        }
       }
     }
 
@@ -367,6 +430,11 @@ footer{
 
     }
 
+    .message{
+
+      margin: 15px 0 50px;
+
+    }
 
   }
 

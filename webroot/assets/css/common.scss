@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 $breakpoints: (
-  'sm': 'only screen and (max-width: 414px)',
-  'md': 'only screen and (max-width: 768px)',
+  'sm': 'only screen and (max-width: 767px)',
+  'md': 'only screen and (max-width: 980px)',
   'lg': 'print, screen and (max-width: 1024px)',
   'xl': 'print, screen and (min-width: 1139px)',
   'gnavbp': 'screen and (max-width: 980px) and (min-width: 769px) ',
@@ -17,6 +17,7 @@ $breakpoints: (
 
 html *{
     box-sizing: border-box;
+    line-height: normal;
 }
 
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
@@ -158,7 +159,6 @@ $fontc: rgb(33, 33, 33);
     opacity: 1;
   }
 }
-
  
 html{
   width: 100%;
@@ -199,6 +199,21 @@ $header_h:80px;
   height: auto;
   display: flex;
   justify-content: center;
+  background: white;
+  position: relative;
+z-index: 1000;
+
+  &.slide{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+
+  &.under{
+
+    margin-top: calc(100vh - 160px);
+  }
 
 }
 
@@ -313,7 +328,7 @@ $header_h:80px;
   width: 40px;
   height: 40px;
   display: block;
-  background: rgb(230, 230, 230);
+  background: $sub;
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -366,7 +381,10 @@ $header_h:80px;
 @import "cont1";
 @import "cont2";
 @import "cont3";
+@import "cont4";
+@import "access";
 @import "contactbtn"; 
+@import "footnav"; 
 @import "footer"; 
 @import "loader"; 
 @import "swiper";

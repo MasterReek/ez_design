@@ -20,7 +20,7 @@
     // transition: .8s;
   
     img{
-      width: 10vw;
+      width: 20vw;
       height: auto;
       position: relative;
       z-index: 40001;
@@ -43,7 +43,7 @@
     @include mq(){
 
       img{
-        width:20vw;
+        width:40vw;
         margin-top: -75px;
       }
     }

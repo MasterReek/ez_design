@@ -281,6 +281,8 @@ z-index: 1000;
 
   width: 100%;
   height: 250px;
+  margin-top: $header_h;
+
   background: url(../images/eye_bg.jpg);
   background-size:  cover;
   background-repeat: no-repeat;
@@ -290,7 +292,21 @@ z-index: 1000;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
-  z-index: 5;
+  z-index: 1;
+
+
+  position: fixed;
+  left: 0;
+
+  & + div{
+
+    margin-top: 250px + $header_h;
+    position: relative;
+    z-index: 6;
+  }
+
+
+
 
   h2{
     
@@ -322,6 +338,8 @@ z-index: 1000;
     }
   }
 }
+
+
 
 #pagetop{
 
@@ -389,7 +407,11 @@ z-index: 1000;
 @import "loader"; 
 @import "swiper";
 @import "sp_menu";
-@import "about";
+
+
+@import "feature";
+
+
 @import "staff";
 @import "environment";
 

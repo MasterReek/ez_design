@@ -29,6 +29,12 @@ $(document).ready( function() {
         }
     });
 
+    $(".footlogo,.headlogo").click(function(){
+
+        	
+        window.location.href = "/index.html";
+
+    });
 
   
     //EnterKeyFix

@@ -31,8 +31,13 @@ $(document).ready( function() {
 
     $(".footlogo,.headlogo").click(function(){
 
-        	
         window.location.href = "/index.html";
+
+    });
+
+    $(".mailform").click(function(){
+
+        window.location.href = "/contact.html";
 
     });
 

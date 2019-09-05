@@ -282,18 +282,22 @@ z-index: 1000;
   width: 100%;
   height: 250px;
   margin-top: $header_h;
-
-  background: url(../images/eye_bg.jpg);
+  
   background-size:  cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+  background-image: url(../images/eye_bg.jpg);
 
+  &.kyotaku{
+    background-image: url(../images/eye_bg_kyotaku.jpg);
+  }
 
   position: fixed;
   left: 0;
@@ -304,9 +308,6 @@ z-index: 1000;
     position: relative;
     z-index: 6;
   }
-
-
-
 
   h2{
     
@@ -329,6 +330,17 @@ z-index: 1000;
     }
   }
 
+  h3{
+
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 4px white;
+    color: $sub;
+    text-align: center;
+
+  }
+
   @include mq(){
 
     height: 150px;
@@ -336,6 +348,16 @@ z-index: 1000;
     h2{
       font-size: 20px;
     }
+
+    h3{
+      font-size: 14px;
+    }
+    & + div{
+
+      margin-top: 150px + $header_h;
+ 
+    }
+
   }
 }
 
@@ -410,6 +432,7 @@ z-index: 1000;
 
 
 @import "feature";
+@import "kyotaku";
 
 
 @import "staff";

@@ -1,0 +1,26 @@
+.kaisyu{
+
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align:center;
+    background-image: 
+    -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #fffcf6), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #fffcf6),color-stop(.75, #fffcf6), color-stop(.75, transparent),to(transparent));
+    background-size: 7px 7px;
+
+    h4{
+        font-size: 26px;
+        color: $coc;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 18px;
+        color: $sub;
+        line-height: 200%;
+        // text-align: left;
+    }
+}

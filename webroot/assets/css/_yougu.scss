@@ -1,7 +1,7 @@
 
 .yougu_box{
 
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
   max-width: 1000px;
   padding:50px 30px;
@@ -44,6 +44,9 @@
       margin-bottom: 10px;
       list-style: circle;
       list-style-position: outside;
+      border-radius: 40px;
+      background: white;
+      padding: 5px 5px 5px 15px;
     }
 
   }
@@ -61,15 +64,94 @@
 
       
       li{
+
         list-style: none;
         border-top: 1px solid white;
         padding: 15px 0;
+        background: none;
+        border-radius: 0;
 
         &:nth-last-of-type(1){
           border-bottom: 1px solid white;
         }
       }
     }
+  }
+
+}
+
+.itemlist{
+
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding-bottom: 50px;
+  border-bottom: 1px dotted $sub;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  dt{
+    width: 25%;
+    height: auto;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  dd{
+
+    width: 70%;
+    height: auto;
+
+    p{
+
+      strong{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 15px;
+        transform: translateX(-15px);
+      }
+      text-align: left;
+      font-size: 16px;
+
+      span{
+
+        display: block;
+        padding: 15px;
+        margin-top: 20px;
+        
+        background-image: 
+        -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+        background-size: 7px 7px;
+
+      }
+    }
+  }
+
+  @include mq(sm){
+
+    dt,dd{
+      width: 100%;
+    }
+
+    dt{
+      margin-bottom: 20px;
+    }
+    dd{
+
+      p{
+        font-size: 14px;
+        strong{
+          font-size: 18px;
+          text-align:center
+        }
+      }
+    }
+
   }
 
 }

@@ -160,8 +160,12 @@
     text-align: center;
     margin-bottom: 120px;
     border-bottom: 1px dotted $sub;
-    position: relativex;
+    position: relative;
     z-index: 5;
+
+    &:nth-last-of-type(1){
+      margin-bottom: 0
+    }
 
     &.type2{
       margin-bottom: 0;
@@ -175,8 +179,10 @@
       background: $sub;
       border-radius: 50px;
       display: inline;
+
       br {
         display: none;
+        
       }
     }
 
@@ -185,6 +191,11 @@
       margin-top: 50px;
       color: rgb(80, 80, 80);
       font-size: 20px;
+
+      &.large{
+        margin-top: 0;
+        font-size: 28px;
+      }
     }
 
     @include mq(sm) {
@@ -202,6 +213,11 @@
 
         br {
           display: none;
+        }
+
+        &.large{
+          margin-top: 0;
+          font-size: 18px;
         }
       }
 

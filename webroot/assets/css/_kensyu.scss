@@ -1,0 +1,125 @@
+.kensyucont{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    background: #fffcf6;
+    background-image: none;
+  
+
+
+    &:nth-of-type(2n){
+       
+
+        background: $bluebg;
+
+
+        .inner p strong{
+            color: $sub;
+            border-bottom: 2px solid $sub;
+        }
+    }
+
+    .inner{
+
+        @include content_padding();
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1000px;
+
+        p{
+            font-size: 18px;
+            padding: 20px 30px;
+            // background: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+            line-height: 200%;
+
+            strong{
+
+                $fz:24px;
+                font-size: $fz;
+                color: $coc;
+                display: block;
+                width: 100%;
+                transform: translateX(-$fz / 2);
+                margin-bottom: 15px;
+                border-bottom: 2px solid $coc;
+                padding-bottom: 10px;
+
+                i{
+                    margin-right: 10px;
+                    font-size: 28px;
+                }
+
+                &:before{
+                    content: '「'
+                }
+                &:after{
+                    content:'」'
+                }
+            }
+
+            span{
+
+                font-size: 14px;
+                display: block;
+                padding: 15px;
+                background: white;
+                margin: 15px 0;
+
+                background-image: 
+                -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+                background-size: 7px 7px;
+            }
+        }
+
+        .imgbox{
+
+            width: 35%;
+            
+            img{
+                width: 100%;
+            }
+        }
+        .txtbox{
+
+            width: 63%;
+        }
+
+        @include mq(sm){
+
+            p{
+                padding: 0;
+
+                strong{
+                    font-size: 20px;
+                    text-align:center
+                }
+            }
+
+            .imgbox,.txtbox{
+
+                width: 100%;
+            }
+
+            .imgbox{
+                order: 1;
+                margin-bottom: 20px;
+            }
+            .txtbox{
+                order: 2;
+            }
+
+        }
+
+    }
+
+}

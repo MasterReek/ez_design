@@ -106,7 +106,8 @@ body {
 //コーポレートカラー
 $coc: #E56103;
 $sub:#00919A;
-$bluebg:#daefeb;
+// $bluebg:#daefeb;
+$bluebg:#f0fbf9;
  
 
 p{
@@ -210,7 +211,7 @@ $header_h:80px;
   flex-wrap: wrap;
   background: white;
   position: relative;
-z-index: 1000;
+  z-index: 1000;
 
   &.slide{
     position: fixed;
@@ -299,6 +300,10 @@ z-index: 1000;
     background: $bluebg;
   }
 
+  &.kensyu{
+    background-color: $bluebg;
+  }
+
 }
 
 .conttitle{
@@ -330,7 +335,6 @@ z-index: 1000;
 
 }
 
-
 .eye{
 
   width: 100%;
@@ -353,6 +357,7 @@ z-index: 1000;
 
   &.houmon{background-image: url(../images/eye_bg_houmon.jpg);}
   &.yougu{background-image: url(../images/eye_bg_yougu.jpg);}
+  &.kensyu{background-image: url(../images/eye_bg_kensyu.jpg);}
 
   position: fixed;
   left: 0;
@@ -428,6 +433,72 @@ z-index: 1000;
   }
 }
 
+
+.normalDl{
+
+  width: 100%;
+  @include maxw();
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #ffede0;
+  background-image: 
+  -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+  background-size: 7px 7px;
+
+  &.type2 dt{
+    background: $sub;
+  }
+
+  dt{
+    width: 25%;
+    height:  auto;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: $coc;
+    color: white;
+    padding:20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  dd{
+    box-sizing: border-box;
+    width: 74.5%;
+    height: auto;
+    font-size: 16px;
+    background-color: white;
+    padding: 20px 10px 20px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+
+  dt,dd{
+    margin-bottom: .5%;
+  }
+
+  @include mq(sm){
+
+    dt,dd{
+      width: 100%;
+    }
+
+    dt{
+      padding: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 #pagetop{
 
   width: 40px;
@@ -501,10 +572,8 @@ z-index: 1000;
 @import "service";
 @import "yougu";
 @import "kaisyu";
+@import "kensyu";
 
-
-@import "staff";
-@import "environment";
 
 @import "company";
 @import "contact";

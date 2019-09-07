@@ -163,6 +163,11 @@
     position: relative;
     z-index: 5;
 
+    &.nobod{
+
+      border-bottom: 0px;
+    }
+
     &:nth-last-of-type(1){
       margin-bottom: 0
     }

@@ -113,9 +113,40 @@
   }
 }
 
+
+
 .steps_wrap {
 
-  background: rgb(238, 255, 252);
+  background-color: $bluebg;
+
+
+  &.contact{
+    background-color: $bluebg;
+    background-image: url(../images/content_bg_blur.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    position: relative;
+
+    &:after{
+      content:'';
+      width: 100%;
+      height: auto;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background-image: url(../images/cover_blue.png);
+      background-size: cover;
+      background-position: left top;
+      background-repeat: no-repeat; 
+      z-index: 3;
+
+    }
+  }
+
+ 
   @include content_padding();
   display: flex;
   justify-content: center;
@@ -128,8 +159,14 @@
     max-width: 1000px;
     text-align: center;
     margin-bottom: 120px;
-
     border-bottom: 1px dotted $sub;
+    position: relativex;
+    z-index: 5;
+
+    &.type2{
+      margin-bottom: 0;
+      border-bottom: 0px;
+    }
 
     h4 {
       font-size: 24px;
@@ -192,6 +229,10 @@
     }
   }
 
+  &.type2{
+    background-color: #fffcf6;
+  }
+
 
 }
 
@@ -206,6 +247,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: stretch;
+
+  transform: scale(.7);
+  transform-origin: center;
 
   dl {
     width: 48%;
@@ -285,15 +329,29 @@
   }
 
   @include mq() {
-    dl {
-      width: 100%;
+
+    dl{
+
+      dd{
+
+        .txtonly{
+          font-size: 20px;
+        }
+      }
     }
+
+ 
   }
 
   @include mq(sm) {
+
+    transform: scale(1);
+    padding: 40px 0 0;
+
     dl {
       align-items: center;
       margin-bottom: 20px;
+      width: 100%;
 
       dt {
         i {
@@ -334,6 +392,7 @@
   margin-top: 40px;
   padding: 40px 20px;
   background: rgba(255, 255, 255, 0.899);
+  border-radius: 10px;
 
   dt {
     width: 20%;

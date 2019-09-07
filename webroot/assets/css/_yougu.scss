@@ -1,0 +1,75 @@
+
+.yougu_box{
+
+  font-size: 18px;
+  width: 100%;
+  max-width: 1000px;
+  padding:50px 30px;
+  background-color: white;
+
+  p{
+    line-height: 240%;
+    text-align: center;
+
+    strong{
+
+      color: $sub;
+    }
+  }
+
+  ul {
+
+    font-size: 14px;
+    color: rgb(95, 95, 95);
+    padding: 15px;
+    
+    
+    background: $bluebg;
+
+    background-color: $bluebg;
+    background-image: 
+    -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+    background-size: 7px 7px;
+
+
+    padding: 40px;
+    
+    display: inline-block;
+    margin-top: 30px;
+    line-height: 180%;
+    text-align: left;
+    width: 80%;
+
+    li{
+      margin-bottom: 10px;
+      list-style: circle;
+      list-style-position: outside;
+    }
+
+  }
+
+  @include mq(sm){
+
+    p{
+      text-align: left;
+      line-height: 180%;
+    }
+
+    ul{
+      width: 100%;
+      padding: 20px;
+
+      
+      li{
+        list-style: none;
+        border-top: 1px solid white;
+        padding: 15px 0;
+
+        &:nth-last-of-type(1){
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+
+}

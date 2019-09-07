@@ -1,0 +1,145 @@
+.service_wrap_page {
+
+  width: 100%;
+  height: auto;
+  @include content_padding();
+  background-color: #fffcf6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 6;
+
+  background-image: url(../images/service_cont_bg_1.png);
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  
+}
+
+.steps_wrap_servicepage{
+
+  @extend .steps_wrap;
+
+}
+
+.read_undermarge{
+
+  display: block;
+  width: 100%;
+  text-align:center;
+  margin-bottom: 80px;
+
+  @include mq(sm){
+
+    text-align:left;
+    margin-bottom: 40px;
+    br{
+      display: none;
+    }
+  }
+}
+
+.service_page {
+
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  li {
+    @include inview_item();
+    width: 48%;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-bottom: 4%;
+
+    .imgbox {
+      width: 25%;
+      height: auto;
+      padding: 7% 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $coc;
+      border-radius: 100px;
+
+      i {
+        font-size: 50px;
+        color: white;
+      }
+    }
+
+    .txtbox {
+      width: 70%;
+      height: auto;
+
+      .plant {
+        font-size: 24px;
+        color: $sub;
+        border-bottom: 2px solid $sub;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include mq() {
+    li {
+      width: 100%;
+
+      .imgbox {
+        width: 20%;
+      }
+
+      .txtbox {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+
+        h4 {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include mq(sm) {
+    li {
+      align-items: center;
+      margin-bottom: 8vh;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+
+      .imgbox {
+        i {
+          font-size: 24px;
+        }
+      }
+
+      .txtbox {
+        .plant {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -47,6 +47,9 @@
     height: calc(100vh - 80px);
     object-fit: cover;
     object-position: 100% 100%;
+    font-family: 'object-fit: cover;'; /*IE対策*/
+    transition: 20s;
+    transform: scale(1.2);
 
     @include mq(){
       height: 70vh;
@@ -70,4 +73,9 @@
 
 .swiper-slide-active{
   // width: 70%;
+
+  
+  img{
+    transform: scale(1);
+  }
 }

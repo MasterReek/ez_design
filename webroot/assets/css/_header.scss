@@ -70,7 +70,6 @@ header{
         position: relative;
 
         &:hover .snav{
-
           opacity: 1;
           pointer-events: all;
         }
@@ -95,6 +94,24 @@ header{
 
             a{
               font-size: 16px;
+              margin-bottom: 15px;
+
+
+              &:after{
+
+                transform: scaleX(0) translateY(5px);
+                transform-origin: left;
+            
+              }
+
+              &:hover,&.current{
+
+                &:after{
+
+                  transform: scaleX(1) translateY(5px);
+    
+                }
+              }
             }
           }
         }
@@ -122,7 +139,7 @@ header{
 
         }
 
-        >a{
+        a{
 
           position: relative;
 
